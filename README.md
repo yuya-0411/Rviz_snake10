@@ -1,4 +1,4 @@
-# snake_rviz
+# snake
 URDFとそれをRviz上に表示するプログラムを格納
 
 ## フォルダ構成
