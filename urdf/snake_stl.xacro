@@ -1,0 +1,840 @@
+<robot name="test_robot" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:property name="dynamixel" value="package://snake/mesh/dynamixel.stl"/> 
+  <xacro:property name="mass_d" value="0.005" />
+  <xacro:property name="width_d" value="0.024" />
+  <xacro:property name="depth_d" value="0.024" />
+  <xacro:property name="height_d" value="0.036" />
+	<xacro:property name="ixx_d" value="0.00000078" />
+	<xacro:property name="iyy_d" value="0.00000078" />
+  <xacro:property name="izz_d" value="0.00000048" />
+  <xacro:property name="gear" value="1" />
+
+  <xacro:property name="adaptor" value="package://snake/mesh/adaptor.stl"/>
+  <xacro:property name="mass_a" value="0.001" />
+  <xacro:property name="width_a" value="0.018" />
+  <xacro:property name="depth_a" value="0.035" />
+  <xacro:property name="height_a" value="0.015" />
+  <xacro:property name="ixx_a" value="0.000000120" />
+  <xacro:property name="iyy_a" value="0.000000046" />
+  <xacro:property name="izz_a" value="0.000000129" />
+
+
+	<link name="base_link"/>
+
+<!--Dynamixelの定義-->
+	<!--リンク1-->
+	<link name="dynamixel_001">
+		<visual>
+			<geometry>
+				<mesh filename = "${dynamixel}"/>
+			</geometry>
+			<material name="red">
+				<color rgba="0.7 0.0 0.0 1.0"/>
+			</material>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+		</visual>
+        <!--物理的特性-->
+        <!--干渉-->
+        <collision>
+        	<geometry>
+            <mesh filename = "${dynamixel}"/>
+        	</geometry>
+        </collision>
+        <!--慣性-->
+        <inertial>
+        	<mass value="${mass_d}"/>
+        	<inertia ixx="${ixx_d}" iyy="${iyy_d}" izz="${izz_d}" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+	</link>
+	<!--リンク3-->
+	<link name="dynamixel_101">
+    <visual>
+      <geometry>
+        <mesh filename = "${dynamixel}"/>
+      </geometry>
+      <material name="red">
+        <color rgba="0.7 0.0 0.0 1.0"/>
+      </material>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+        <!--物理的特性-->
+        <!--干渉-->
+        <collision>
+          <geometry>
+            <mesh filename = "${dynamixel}"/>
+          </geometry>
+        </collision>
+        <!--慣性-->
+        <inertial>
+          <mass value="${mass_d}"/>
+          <inertia ixx="${ixx_d}" iyy="${iyy_d}" izz="${izz_d}" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+  </link>
+	<!--リンク4-->
+	<link name="dynamixel_002">
+    <visual>
+      <geometry>
+        <mesh filename = "${dynamixel}"/>
+      </geometry>
+      <material name="red">
+        <color rgba="0.7 0.0 0.0 1.0"/>
+      </material>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+        <!--物理的特性-->
+        <!--干渉-->
+        <collision>
+          <geometry>
+            <mesh filename = "${dynamixel}"/>
+          </geometry>
+        </collision>
+        <!--慣性-->
+        <inertial>
+          <mass value="${mass_d}"/>
+          <inertia ixx="${ixx_d}" iyy="${iyy_d}" izz="${izz_d}" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+  </link>
+	<!--リンク5-->
+	<link name="dynamixel_102">
+    <visual>
+      <geometry>
+        <mesh filename = "${dynamixel}"/>
+      </geometry>
+      <material name="red">
+        <color rgba="0.7 0.0 0.0 1.0"/>
+      </material>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+        <!--物理的特性-->
+        <!--干渉-->
+        <collision>
+          <geometry>
+            <mesh filename = "${dynamixel}"/>
+          </geometry>
+        </collision>
+        <!--慣性-->
+        <inertial>
+          <mass value="${mass_d}"/>
+          <inertia ixx="${ixx_d}" iyy="${iyy_d}" izz="${izz_d}" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+  </link>
+  <!--リンク4-->
+  <link name="dynamixel_003">
+    <visual>
+      <geometry>
+        <mesh filename = "${dynamixel}"/>
+      </geometry>
+      <material name="red">
+        <color rgba="0.7 0.0 0.0 1.0"/>
+      </material>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+        <!--物理的特性-->
+        <!--干渉-->
+        <collision>
+          <geometry>
+            <mesh filename = "${dynamixel}"/>
+          </geometry>
+        </collision>
+        <!--慣性-->
+        <inertial>
+          <mass value="${mass_d}"/>
+          <inertia ixx="${ixx_d}" iyy="${iyy_d}" izz="${izz_d}" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+  </link>
+  <!--リンク5-->
+  <link name="dynamixel_103">
+    <visual>
+      <geometry>
+        <mesh filename = "${dynamixel}"/>
+      </geometry>
+      <material name="red">
+        <color rgba="0.7 0.0 0.0 1.0"/>
+      </material>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+        <!--物理的特性-->
+        <!--干渉-->
+        <collision>
+          <geometry>
+            <mesh filename = "${dynamixel}"/>
+          </geometry>
+        </collision>
+        <!--慣性-->
+        <inertial>
+          <mass value="${mass_d}"/>
+          <inertia ixx="${ixx_d}" iyy="${iyy_d}" izz="${izz_d}" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+  </link>
+  <!--リンク4-->
+  <link name="dynamixel_004">
+    <visual>
+      <geometry>
+        <mesh filename = "${dynamixel}"/>
+      </geometry>
+      <material name="red">
+        <color rgba="0.7 0.0 0.0 1.0"/>
+      </material>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+        <!--物理的特性-->
+        <!--干渉-->
+        <collision>
+          <geometry>
+            <mesh filename = "${dynamixel}"/>
+          </geometry>
+        </collision>
+        <!--慣性-->
+        <inertial>
+          <mass value="${mass_d}"/>
+          <inertia ixx="${ixx_d}" iyy="${iyy_d}" izz="${izz_d}" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+  </link>
+  <!--リンク5-->
+  <link name="dynamixel_104">
+    <visual>
+      <geometry>
+        <mesh filename = "${dynamixel}"/>
+      </geometry>
+      <material name="red">
+        <color rgba="0.7 0.0 0.0 1.0"/>
+      </material>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+        <!--物理的特性-->
+        <!--干渉-->
+        <collision>
+          <geometry>
+            <mesh filename = "${dynamixel}"/>
+          </geometry>
+        </collision>
+        <!--慣性-->
+        <inertial>
+          <mass value="${mass_d}"/>
+          <inertia ixx="${ixx_d}" iyy="${iyy_d}" izz="${izz_d}" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+  </link>
+  <!--リンク4-->
+  <link name="dynamixel_005">
+    <visual>
+      <geometry>
+        <mesh filename = "${dynamixel}"/>
+      </geometry>
+      <material name="red">
+        <color rgba="0.7 0.0 0.0 1.0"/>
+      </material>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+        <!--物理的特性-->
+        <!--干渉-->
+        <collision>
+          <geometry>
+            <mesh filename = "${dynamixel}"/>
+          </geometry>
+        </collision>
+        <!--慣性-->
+        <inertial>
+          <mass value="${mass_d}"/>
+          <inertia ixx="${ixx_d}" iyy="${iyy_d}" izz="${izz_d}" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+  </link>
+  <!--リンク5-->
+  <link name="dynamixel_105">
+    <visual>
+      <geometry>
+        <mesh filename = "${dynamixel}"/>
+      </geometry>
+      <material name="red">
+        <color rgba="0.7 0.0 0.0 1.0"/>
+      </material>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+        <!--物理的特性-->
+        <!--干渉-->
+        <collision>
+          <geometry>
+            <mesh filename = "${dynamixel}"/>
+          </geometry>
+        </collision>
+        <!--慣性-->
+        <inertial>
+          <mass value="${mass_d}"/>
+          <inertia ixx="${ixx_d}" iyy="${iyy_d}" izz="${izz_d}" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+  </link>
+
+
+
+
+
+<!--アダプタの定義-->
+  <!--リンク2-->
+  <link name="link_001">
+    <visual>
+      <geometry>
+        <mesh filename = "${adaptor}"/>
+      </geometry>
+      <material name="silver">
+        <color rgba="0.75 0.75 0.75 1"/>
+      </material>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+        <!--物理的特性-->
+        <!--干渉-->
+        <collision>
+          <geometry>
+            <mesh filename = "${adaptor}"/>
+          </geometry>
+        </collision>
+        <!--慣性-->
+        <inertial>
+          <mass value="${mass_a}"/>
+          <inertia ixx="${ixx_a}" iyy="${iyy_a}" izz="${izz_a}" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+  </link>
+
+  <!--リンク2-->
+  <link name="link_002">
+    <visual>
+      <geometry>
+        <mesh filename = "${adaptor}"/>
+      </geometry>
+      <material name="silver">
+        <color rgba="0.75 0.75 0.75 1"/>
+      </material>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+        <!--物理的特性-->
+        <!--干渉-->
+        <collision>
+          <geometry>
+            <mesh filename = "${adaptor}"/>
+          </geometry>
+        </collision>
+        <!--慣性-->
+        <inertial>
+          <mass value="${mass_a}"/>
+          <inertia ixx="${ixx_a}" iyy="${iyy_a}" izz="${izz_a}" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+  </link>
+
+  <!--リンク2-->
+  <link name="link_003">
+    <visual>
+      <geometry>
+        <mesh filename = "${adaptor}"/>
+      </geometry>
+      <material name="silver">
+        <color rgba="0.75 0.75 0.75 1"/>
+      </material>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+        <!--物理的特性-->
+        <!--干渉-->
+        <collision>
+          <geometry>
+            <mesh filename = "${adaptor}"/>
+          </geometry>
+        </collision>
+        <!--慣性-->
+        <inertial>
+          <mass value="${mass_a}"/>
+          <inertia ixx="${ixx_a}" iyy="${iyy_a}" izz="${izz_a}" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+  </link>
+
+  <!--リンク2-->
+  <link name="link_004">
+    <visual>
+      <geometry>
+        <mesh filename = "${adaptor}"/>
+      </geometry>
+      <material name="silver">
+        <color rgba="0.75 0.75 0.75 1"/>
+      </material>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+        <!--物理的特性-->
+        <!--干渉-->
+        <collision>
+          <geometry>
+            <mesh filename = "${adaptor}"/>
+          </geometry>
+        </collision>
+        <!--慣性-->
+        <inertial>
+          <mass value="${mass_a}"/>
+          <inertia ixx="${ixx_a}" iyy="${iyy_a}" izz="${izz_a}" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+  </link>
+
+  <!--リンク2-->
+  <link name="link_005">
+    <visual>
+      <geometry>
+        <mesh filename = "${adaptor}"/>
+      </geometry>
+      <material name="silver">
+        <color rgba="0.75 0.75 0.75 1"/>
+      </material>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+        <!--物理的特性-->
+        <!--干渉-->
+        <collision>
+          <geometry>
+            <mesh filename = "${adaptor}"/>
+          </geometry>
+        </collision>
+        <!--慣性-->
+        <inertial>
+          <mass value="${mass_a}"/>
+          <inertia ixx="${ixx_a}" iyy="${iyy_a}" izz="${izz_a}" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+  </link>
+
+  <!--リンク2-->
+  <link name="link_006">
+    <visual>
+      <geometry>
+        <mesh filename = "${adaptor}"/>
+      </geometry>
+      <material name="silver">
+        <color rgba="0.75 0.75 0.75 1"/>
+      </material>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+        <!--物理的特性-->
+        <!--干渉-->
+        <collision>
+          <geometry>
+            <mesh filename = "${adaptor}"/>
+          </geometry>
+        </collision>
+        <!--慣性-->
+        <inertial>
+          <mass value="${mass_a}"/>
+          <inertia ixx="${ixx_a}" iyy="${iyy_a}" izz="${izz_a}" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+  </link>
+
+  <!--リンク2-->
+  <link name="link_007">
+    <visual>
+      <geometry>
+        <mesh filename = "${adaptor}"/>
+      </geometry>
+      <material name="silver">
+        <color rgba="0.75 0.75 0.75 1"/>
+      </material>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+        <!--物理的特性-->
+        <!--干渉-->
+        <collision>
+          <geometry>
+            <mesh filename = "${adaptor}"/>
+          </geometry>
+        </collision>
+        <!--慣性-->
+        <inertial>
+          <mass value="${mass_a}"/>
+          <inertia ixx="${ixx_a}" iyy="${iyy_a}" izz="${izz_a}" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+  </link>
+
+  <!--リンク2-->
+  <link name="link_008">
+    <visual>
+      <geometry>
+        <mesh filename = "${adaptor}"/>
+      </geometry>
+      <material name="silver">
+        <color rgba="0.75 0.75 0.75 1"/>
+      </material>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+        <!--物理的特性-->
+        <!--干渉-->
+        <collision>
+          <geometry>
+            <mesh filename = "${adaptor}"/>
+          </geometry>
+        </collision>
+        <!--慣性-->
+        <inertial>
+          <mass value="${mass_a}"/>
+          <inertia ixx="${ixx_a}" iyy="${iyy_a}" izz="${izz_a}" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+  </link>
+
+  <!--リンク2-->
+  <link name="link_009">
+    <visual>
+      <geometry>
+        <mesh filename = "${adaptor}"/>
+      </geometry>
+      <material name="silver">
+        <color rgba="0.75 0.75 0.75 1"/>
+      </material>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+        <!--物理的特性-->
+        <!--干渉-->
+        <collision>
+          <geometry>
+            <mesh filename = "${adaptor}"/>
+          </geometry>
+        </collision>
+        <!--慣性-->
+        <inertial>
+          <mass value="${mass_a}"/>
+          <inertia ixx="${ixx_a}" iyy="${iyy_a}" izz="${izz_a}" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+  </link>
+
+  <!--リンク2-->
+  <link name="link_010">
+    <visual>
+      <geometry>
+        <mesh filename = "${adaptor}"/>
+      </geometry>
+      <material name="silver">
+        <color rgba="0.75 0.75 0.75 1"/>
+      </material>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+        <!--物理的特性-->
+        <!--干渉-->
+        <collision>
+          <geometry>
+            <mesh filename = "${adaptor}"/>
+          </geometry>
+        </collision>
+        <!--慣性-->
+        <inertial>
+          <mass value="${mass_a}"/>
+          <inertia ixx="${ixx_a}" iyy="${iyy_a}" izz="${izz_a}" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+  </link>
+
+
+
+
+	<!--ジョイント設定-->
+	<!--ワールドとリンク1-->
+	<joint name="fixed_000" type="fixed">
+		<parent link="base_link"/>
+		<child  link="dynamixel_001"/>
+		<origin xyz="0 0 0" rpy="0 0 ${-pi/2}"/>
+    	<limit lower="${-pi/2}" upper="${pi/2}" effort="0" velocity="0"/>
+	</joint>
+	<!--Dynamixel1とリンク1-->
+	<joint name="joint_001" type="revolute">
+    <axis xyz="0 1 0"/>   <!--pitch-->
+		<parent link="dynamixel_001"/>
+		<child  link="link_001"/>
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+    	<limit lower="${-pi/2}" upper="${pi/2}" effort="0" velocity="0"/>
+	</joint>
+  <!--リンク1とDynamixel101-->
+  <joint name="fixed_001" type="fixed">
+    <parent link="link_001"/>
+    <child  link="dynamixel_101"/>
+    <origin xyz="0.046 0 0" rpy="${pi/2} 0 0"/>
+      <limit lower="${-pi/2}" upper="${pi/2}" effort="0" velocity="0"/>
+  </joint>
+	<!--Dynamixel101とリンク2-->
+	<joint name="joint_002" type="revolute">
+    <axis xyz="0 1 0"/>   <!--yaw-->
+		<parent link="dynamixel_101"/>
+		<child  link="link_002"/>
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+    	<limit lower="${-pi/2}" upper="${pi/2}" effort="0" velocity="0"/>
+	</joint>
+  <!--リンク2とDynamixel2-->
+  <joint name="fixed_002" type="fixed">
+    <parent link="link_002"/>
+    <child  link="dynamixel_002"/>
+    <origin xyz="0.046 0 0" rpy="${-pi/2} 0 0"/>
+      <limit lower="${-pi/2}" upper="${pi/2}" effort="0" velocity="0"/>
+  </joint>
+  <!--Dynamixel2とリンク3-->
+  <joint name="joint_003" type="revolute">
+    <axis xyz="0 1 0"/>   <!--pitch-->
+    <parent link="dynamixel_002"/>
+    <child  link="link_003"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+      <limit lower="${-pi/2}" upper="${pi/2}" effort="0" velocity="0"/>
+  </joint>
+  <!--リンク3とDynamixel102-->
+  <joint name="fixed_003" type="fixed">
+    <parent link="link_003"/>
+    <child  link="dynamixel_102"/>
+    <origin xyz="0.046 0 0" rpy="${pi/2} 0 0"/>
+      <limit lower="${-pi/2}" upper="${pi/2}" effort="0" velocity="0"/>
+  </joint>
+  <!--Dynamixel102とリンク4-->
+  <joint name="joint_004" type="revolute">
+    <axis xyz="0 1 0"/>   <!--yaw-->
+    <parent link="dynamixel_102"/>
+    <child  link="link_004"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+      <limit lower="${-pi/2}" upper="${pi/2}" effort="0" velocity="0"/>
+  </joint>
+  <!--リンク4とDynamixel3-->
+  <joint name="fixed_004" type="fixed">
+    <parent link="link_004"/>
+    <child  link="dynamixel_003"/>
+    <origin xyz="0.046 0 0" rpy="${-pi/2} 0 0"/>
+      <limit lower="${-pi/2}" upper="${pi/2}" effort="0" velocity="0"/>
+  </joint>
+  <!--Dynamixel3とリンク5-->
+  <joint name="joint_005" type="revolute">
+    <axis xyz="0 1 0"/>   <!--pitch-->
+    <parent link="dynamixel_003"/>
+    <child  link="link_005"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+      <limit lower="${-pi/2}" upper="${pi/2}" effort="0" velocity="0"/>
+  </joint>
+  <!--リンク5とDynamixel103-->
+  <joint name="fixed_005" type="fixed">
+    <parent link="link_005"/>
+    <child  link="dynamixel_103"/>
+    <origin xyz="0.046 0 0" rpy="${pi/2} 0 0"/>
+      <limit lower="${-pi/2}" upper="${pi/2}" effort="0" velocity="0"/>
+  </joint>
+  <!--Dynamixel103とリンク6-->
+  <joint name="joint_006" type="revolute">
+    <axis xyz="0 1 0"/>   <!--yaw-->
+    <parent link="dynamixel_103"/>
+    <child  link="link_006"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+      <limit lower="${-pi/2}" upper="${pi/2}" effort="0" velocity="0"/>
+  </joint>
+  <!--リンク6とDynamixel4-->
+  <joint name="fixed_006" type="fixed">
+    <parent link="link_006"/>
+    <child  link="dynamixel_004"/>
+    <origin xyz="0.046 0 0" rpy="${-pi/2} 0 0"/>
+      <limit lower="${-pi/2}" upper="${pi/2}" effort="0" velocity="0"/>
+  </joint>
+  <!--Dynamixel4とリンク7-->
+  <joint name="joint_007" type="revolute">
+    <axis xyz="0 1 0"/>   <!--pitch-->
+    <parent link="dynamixel_004"/>
+    <child  link="link_007"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+      <limit lower="${-pi/2}" upper="${pi/2}" effort="0" velocity="0"/>
+  </joint>
+  <!--リンク7とDynamixel104-->
+  <joint name="fixed_007" type="fixed">
+    <parent link="link_007"/>
+    <child  link="dynamixel_104"/>
+    <origin xyz="0.046 0 0" rpy="${pi/2} 0 0"/>
+      <limit lower="${-pi/2}" upper="${pi/2}" effort="0" velocity="0"/>
+  </joint>
+  <!--Dynamixel104とリンク8-->
+  <joint name="joint_008" type="revolute">
+    <axis xyz="0 1 0"/>   <!--yaw-->
+    <parent link="dynamixel_104"/>
+    <child  link="link_008"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+      <limit lower="${-pi/2}" upper="${pi/2}" effort="0" velocity="0"/>
+  </joint>
+  <!--リンク8とDynamixel5-->
+  <joint name="fixed_008" type="fixed">
+    <parent link="link_008"/>
+    <child  link="dynamixel_005"/>
+    <origin xyz="0.046 0 0" rpy="${-pi/2} 0 0"/>
+      <limit lower="${-pi/2}" upper="${pi/2}" effort="0" velocity="0"/>
+  </joint>
+  <!--Dynamixel5とリンク9-->
+  <joint name="joint_009" type="revolute">
+    <axis xyz="0 1 0"/>   <!--pitch-->
+    <parent link="dynamixel_005"/>
+    <child  link="link_009"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+      <limit lower="${-pi/2}" upper="${pi/2}" effort="0" velocity="0"/>
+  </joint>
+  <!--リンク9とDynamixel105-->
+  <joint name="fixed_009" type="fixed">
+    <parent link="link_009"/>
+    <child  link="dynamixel_105"/>
+    <origin xyz="0.046 0 0" rpy="${pi/2} 0 0"/>
+      <limit lower="${-pi/2}" upper="${pi/2}" effort="0" velocity="0"/>
+  </joint>
+  <!--Dynamixel105とリンク10-->
+  <joint name="joint_010" type="revolute">
+    <axis xyz="0 1 0"/>   <!--yaw-->
+    <parent link="dynamixel_105"/>
+    <child  link="link_010"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+      <limit lower="${-pi/2}" upper="${pi/2}" effort="0" velocity="0"/>
+  </joint>
+
+    <!--トランスミッションの追加-->
+
+    <!--リンク1とリンク2-->
+    <transmission name="trans_001">
+      <type>transmission_interface/SimpleTransmission</type>
+      <!--関節の指定-->
+      <joint name="joint_001">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+      <!--アクチュエータの定義（ギア比1の減速機）-->
+      <actuator name="motor_001">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>"${gear}"</mechanicalReduction>
+      </actuator>
+    </transmission>
+
+    <!--リンク2とリンク3-->
+    <transmission name="trans_002">
+      <type>transmission_interface/SimpleTransmission</type>
+      <!--関節の指定-->
+      <joint name="joint_002">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+      <!--アクチュエータの定義（ギア比1の減速機）-->
+      <actuator name="motor_002">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>${gear}"</mechanicalReduction>
+      </actuator>
+    </transmission>
+
+    <!--リンク3とリンク4-->
+    <transmission name="trans_003">
+      <type>transmission_interface/SimpleTransmission</type>
+      <!--関節の指定-->
+      <joint name="joint_003">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+      <!--アクチュエータの定義（ギア比1の減速機）-->
+      <actuator name="motor_003">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>${gear}"</mechanicalReduction>
+      </actuator>
+    </transmission>
+
+    <!--リンク4とリンク5-->
+    <transmission name="trans_004">
+      <type>transmission_interface/SimpleTransmission</type>
+      <!--関節の指定-->
+      <joint name="joint_004">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+      <!--アクチュエータの定義（ギア比1の減速機）-->
+      <actuator name="motor_004">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>${gear}"</mechanicalReduction>
+      </actuator>
+    </transmission>
+
+    <!--リンク5とリンク6-->
+    <transmission name="trans_005">
+      <type>transmission_interface/SimpleTransmission</type>
+      <!--関節の指定-->
+      <joint name="joint_005">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+      <!--アクチュエータの定義（ギア比1の減速機）-->
+      <actuator name="motor_005">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>${gear}"</mechanicalReduction>
+      </actuator>
+    </transmission>
+
+    <!--リンク6とリンク7-->
+    <transmission name="trans_006">
+      <type>transmission_interface/SimpleTransmission</type>
+      <!--関節の指定-->
+      <joint name="joint_006">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+      <!--アクチュエータの定義（ギア比1の減速機）-->
+      <actuator name="motor_006">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>${gear}"</mechanicalReduction>
+      </actuator>
+    </transmission>
+
+    <!--リンク7とリンク8-->
+    <transmission name="trans_007">
+      <type>transmission_interface/SimpleTransmission</type>
+      <!--関節の指定-->
+      <joint name="joint_007">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+      <!--アクチュエータの定義（ギア比1の減速機）-->
+      <actuator name="motor_007">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>${gear}"</mechanicalReduction>
+      </actuator>
+    </transmission>
+
+    <!--リンク8とリンク9-->
+    <transmission name="trans_008">
+      <type>transmission_interface/SimpleTransmission</type>
+      <!--関節の指定-->
+      <joint name="joint_008">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+      <!--アクチュエータの定義（ギア比1の減速機）-->
+      <actuator name="motor_008">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>${gear}"</mechanicalReduction>
+      </actuator>
+    </transmission>
+
+    <!--リンク9とリンク10-->
+    <transmission name="trans_009">
+      <type>transmission_interface/SimpleTransmission</type>
+      <!--関節の指定-->
+      <joint name="joint_009">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+      <!--アクチュエータの定義（ギア比1の減速機）-->
+      <actuator name="motor_009">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>${gear}"</mechanicalReduction>
+      </actuator>
+    </transmission>
+
+    <!--リンク9とリンク10-->
+    <transmission name="trans_010">
+      <type>transmission_interface/SimpleTransmission</type>
+      <!--関節の指定-->
+      <joint name="joint_010">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+      <!--アクチュエータの定義（ギア比1の減速機）-->
+      <actuator name="motor_010">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>${gear}"</mechanicalReduction>
+      </actuator>
+    </transmission>
+    <!--機能的な部分をロードするための追加要素-->
+    <gazebo>
+      <plugin name="control" filename="libgazebo_ros_control.so"/>
+    </gazebo>
+    
+    <gazebo>
+      <!--関節状態配信プラグインを指定-->
+      <plugin name="joint_state_publisher" filename="libgazebo_ros_joint_state_publisher.so">
+        <!--対象とする関節名を指定-->
+        <jointName>
+          joint_001,
+          joint_002,
+          joint_003,
+          joint_004,
+          joint_005,
+          joint_006,
+          joint_007,
+          joint_008,
+          joint_009,
+          joint_010
+        </jointName>
+      </plugin>
+    </gazebo>
+</robot>
