@@ -21,9 +21,9 @@ urdfフォルダの中にはurdfファイルの代わりにxacroファイルが�
 urdfファイルでも構わないが、urdfを作成する際にxacroで作っておいた方が汎用性を高められる。
 urdfファイルが必要な際は以下のようにしてxacroファイルからurdfファイルを作成することができる。
 
+xacroファイルのあるディレクトリに移動
 ```
-roscd vis_lecture/xacro/
-rosrun xacro xacro snake_stl.xacro --inorder >snake_stl.urdf
+rosrun xacro xacro snake_stl.xacro >snake_stl.urdf
 ```
 
 xacroファイルについては以下のサイトが参考になる。
