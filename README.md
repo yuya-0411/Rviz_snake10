@@ -1,4 +1,4 @@
-# snake
+# Rviz_snake10
 URDFとそれをRviz上に表示するプログラムを格納
 
 ## フォルダ構成
@@ -73,3 +73,5 @@ UnicodeEncodeError: 'ascii' codec can't encode characters in position 30-31: ord
       reload(sys) 
       sys.setdefaultencoding("utf-8")
       ```
+- 参考
+http://www.4k8k.xyz/article/lzzzzzzm/119799802
