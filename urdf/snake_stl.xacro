@@ -46,7 +46,7 @@
         	<inertia ixx="${ixx_d}" iyy="${iyy_d}" izz="${izz_d}" ixy="0" ixz="0" iyz="0"/>
         </inertial>
 	</link>
-	<!--リンク3-->
+	<!--リンク2-->
 	<link name="dynamixel_101">
     <visual>
       <geometry>
@@ -70,7 +70,7 @@
           <inertia ixx="${ixx_d}" iyy="${iyy_d}" izz="${izz_d}" ixy="0" ixz="0" iyz="0"/>
         </inertial>
   </link>
-	<!--リンク4-->
+	<!--リンク3-->
 	<link name="dynamixel_002">
     <visual>
       <geometry>
@@ -94,7 +94,7 @@
           <inertia ixx="${ixx_d}" iyy="${iyy_d}" izz="${izz_d}" ixy="0" ixz="0" iyz="0"/>
         </inertial>
   </link>
-	<!--リンク5-->
+	<!--リンク4-->
 	<link name="dynamixel_102">
     <visual>
       <geometry>
@@ -118,7 +118,7 @@
           <inertia ixx="${ixx_d}" iyy="${iyy_d}" izz="${izz_d}" ixy="0" ixz="0" iyz="0"/>
         </inertial>
   </link>
-  <!--リンク4-->
+  <!--リンク5-->
   <link name="dynamixel_003">
     <visual>
       <geometry>
@@ -142,7 +142,7 @@
           <inertia ixx="${ixx_d}" iyy="${iyy_d}" izz="${izz_d}" ixy="0" ixz="0" iyz="0"/>
         </inertial>
   </link>
-  <!--リンク5-->
+  <!--リンク6-->
   <link name="dynamixel_103">
     <visual>
       <geometry>
@@ -166,7 +166,7 @@
           <inertia ixx="${ixx_d}" iyy="${iyy_d}" izz="${izz_d}" ixy="0" ixz="0" iyz="0"/>
         </inertial>
   </link>
-  <!--リンク4-->
+  <!--リンク7-->
   <link name="dynamixel_004">
     <visual>
       <geometry>
@@ -190,7 +190,7 @@
           <inertia ixx="${ixx_d}" iyy="${iyy_d}" izz="${izz_d}" ixy="0" ixz="0" iyz="0"/>
         </inertial>
   </link>
-  <!--リンク5-->
+  <!--リンク8-->
   <link name="dynamixel_104">
     <visual>
       <geometry>
@@ -214,7 +214,7 @@
           <inertia ixx="${ixx_d}" iyy="${iyy_d}" izz="${izz_d}" ixy="0" ixz="0" iyz="0"/>
         </inertial>
   </link>
-  <!--リンク4-->
+  <!--リンク9-->
   <link name="dynamixel_005">
     <visual>
       <geometry>
@@ -238,7 +238,7 @@
           <inertia ixx="${ixx_d}" iyy="${iyy_d}" izz="${izz_d}" ixy="0" ixz="0" iyz="0"/>
         </inertial>
   </link>
-  <!--リンク5-->
+  <!--リンク10-->
   <link name="dynamixel_105">
     <visual>
       <geometry>
@@ -268,7 +268,7 @@
 
 
 <!--アダプタの定義-->
-  <!--リンク2-->
+  <!--リンク1-->
   <link name="link_001">
     <visual>
       <geometry>
@@ -318,7 +318,7 @@
         </inertial>
   </link>
 
-  <!--リンク2-->
+  <!--リンク3-->
   <link name="link_003">
     <visual>
       <geometry>
@@ -343,7 +343,7 @@
         </inertial>
   </link>
 
-  <!--リンク2-->
+  <!--リンク4-->
   <link name="link_004">
     <visual>
       <geometry>
@@ -368,7 +368,7 @@
         </inertial>
   </link>
 
-  <!--リンク2-->
+  <!--リンク5-->
   <link name="link_005">
     <visual>
       <geometry>
@@ -393,7 +393,7 @@
         </inertial>
   </link>
 
-  <!--リンク2-->
+  <!--リンク6-->
   <link name="link_006">
     <visual>
       <geometry>
@@ -418,7 +418,7 @@
         </inertial>
   </link>
 
-  <!--リンク2-->
+  <!--リンク7-->
   <link name="link_007">
     <visual>
       <geometry>
@@ -443,7 +443,7 @@
         </inertial>
   </link>
 
-  <!--リンク2-->
+  <!--リンク8-->
   <link name="link_008">
     <visual>
       <geometry>
@@ -468,7 +468,7 @@
         </inertial>
   </link>
 
-  <!--リンク2-->
+  <!--リンク9-->
   <link name="link_009">
     <visual>
       <geometry>
@@ -493,7 +493,7 @@
         </inertial>
   </link>
 
-  <!--リンク2-->
+  <!--リンク10-->
   <link name="link_010">
     <visual>
       <geometry>
