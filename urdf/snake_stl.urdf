@@ -5,8 +5,6 @@
 <!-- =================================================================================== -->
 <robot name="test_robot">
   <link name="base_link"/>
-  <!--Dynamixelの定義-->
-  <!--リンク1-->
   <link name="dynamixel_001">
     <visual>
       <geometry>
@@ -30,7 +28,6 @@
       <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
     </inertial>
   </link>
-  <!--リンク2-->
   <link name="dynamixel_101">
     <visual>
       <geometry>
@@ -54,7 +51,6 @@
       <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
     </inertial>
   </link>
-  <!--リンク3-->
   <link name="dynamixel_002">
     <visual>
       <geometry>
@@ -78,7 +74,6 @@
       <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
     </inertial>
   </link>
-  <!--リンク4-->
   <link name="dynamixel_102">
     <visual>
       <geometry>
@@ -102,7 +97,6 @@
       <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
     </inertial>
   </link>
-  <!--リンク5-->
   <link name="dynamixel_003">
     <visual>
       <geometry>
@@ -126,7 +120,6 @@
       <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
     </inertial>
   </link>
-  <!--リンク6-->
   <link name="dynamixel_103">
     <visual>
       <geometry>
@@ -150,7 +143,6 @@
       <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
     </inertial>
   </link>
-  <!--リンク7-->
   <link name="dynamixel_004">
     <visual>
       <geometry>
@@ -174,7 +166,6 @@
       <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
     </inertial>
   </link>
-  <!--リンク8-->
   <link name="dynamixel_104">
     <visual>
       <geometry>
@@ -198,7 +189,6 @@
       <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
     </inertial>
   </link>
-  <!--リンク9-->
   <link name="dynamixel_005">
     <visual>
       <geometry>
@@ -222,7 +212,6 @@
       <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
     </inertial>
   </link>
-  <!--リンク10-->
   <link name="dynamixel_105">
     <visual>
       <geometry>
@@ -246,15 +235,13 @@
       <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
     </inertial>
   </link>
-  <!--アダプタの定義-->
-  <!--リンク1-->
   <link name="link_001">
     <visual>
       <geometry>
-        <mesh filename="package://snake/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
-      <material name="silver">
-        <color rgba="0.75 0.75 0.75 1"/>
+      <material name="red">
+        <color rgba="0.7 0.0 0.0 1.0"/>
       </material>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </visual>
@@ -262,23 +249,22 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://snake/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
     <inertial>
-      <mass value="0.001"/>
-      <inertia ixx="1.2e-07" ixy="0" ixz="0" iyy="4.6e-08" iyz="0" izz="1.29e-07"/>
+      <mass value="0.005"/>
+      <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
     </inertial>
   </link>
-  <!--リンク2-->
   <link name="link_002">
     <visual>
       <geometry>
-        <mesh filename="package://snake/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
-      <material name="silver">
-        <color rgba="0.75 0.75 0.75 1"/>
+      <material name="red">
+        <color rgba="0.7 0.0 0.0 1.0"/>
       </material>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </visual>
@@ -286,23 +272,22 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://snake/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
     <inertial>
-      <mass value="0.001"/>
-      <inertia ixx="1.2e-07" ixy="0" ixz="0" iyy="4.6e-08" iyz="0" izz="1.29e-07"/>
+      <mass value="0.005"/>
+      <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
     </inertial>
   </link>
-  <!--リンク3-->
   <link name="link_003">
     <visual>
       <geometry>
-        <mesh filename="package://snake/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
-      <material name="silver">
-        <color rgba="0.75 0.75 0.75 1"/>
+      <material name="red">
+        <color rgba="0.7 0.0 0.0 1.0"/>
       </material>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </visual>
@@ -310,23 +295,22 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://snake/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
     <inertial>
-      <mass value="0.001"/>
-      <inertia ixx="1.2e-07" ixy="0" ixz="0" iyy="4.6e-08" iyz="0" izz="1.29e-07"/>
+      <mass value="0.005"/>
+      <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
     </inertial>
   </link>
-  <!--リンク4-->
   <link name="link_004">
     <visual>
       <geometry>
-        <mesh filename="package://snake/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
-      <material name="silver">
-        <color rgba="0.75 0.75 0.75 1"/>
+      <material name="red">
+        <color rgba="0.7 0.0 0.0 1.0"/>
       </material>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </visual>
@@ -334,23 +318,22 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://snake/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
     <inertial>
-      <mass value="0.001"/>
-      <inertia ixx="1.2e-07" ixy="0" ixz="0" iyy="4.6e-08" iyz="0" izz="1.29e-07"/>
+      <mass value="0.005"/>
+      <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
     </inertial>
   </link>
-  <!--リンク5-->
   <link name="link_005">
     <visual>
       <geometry>
-        <mesh filename="package://snake/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
-      <material name="silver">
-        <color rgba="0.75 0.75 0.75 1"/>
+      <material name="red">
+        <color rgba="0.7 0.0 0.0 1.0"/>
       </material>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </visual>
@@ -358,23 +341,22 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://snake/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
     <inertial>
-      <mass value="0.001"/>
-      <inertia ixx="1.2e-07" ixy="0" ixz="0" iyy="4.6e-08" iyz="0" izz="1.29e-07"/>
+      <mass value="0.005"/>
+      <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
     </inertial>
   </link>
-  <!--リンク6-->
   <link name="link_006">
     <visual>
       <geometry>
-        <mesh filename="package://snake/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
-      <material name="silver">
-        <color rgba="0.75 0.75 0.75 1"/>
+      <material name="red">
+        <color rgba="0.7 0.0 0.0 1.0"/>
       </material>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </visual>
@@ -382,23 +364,22 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://snake/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
     <inertial>
-      <mass value="0.001"/>
-      <inertia ixx="1.2e-07" ixy="0" ixz="0" iyy="4.6e-08" iyz="0" izz="1.29e-07"/>
+      <mass value="0.005"/>
+      <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
     </inertial>
   </link>
-  <!--リンク7-->
   <link name="link_007">
     <visual>
       <geometry>
-        <mesh filename="package://snake/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
-      <material name="silver">
-        <color rgba="0.75 0.75 0.75 1"/>
+      <material name="red">
+        <color rgba="0.7 0.0 0.0 1.0"/>
       </material>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </visual>
@@ -406,23 +387,22 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://snake/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
     <inertial>
-      <mass value="0.001"/>
-      <inertia ixx="1.2e-07" ixy="0" ixz="0" iyy="4.6e-08" iyz="0" izz="1.29e-07"/>
+      <mass value="0.005"/>
+      <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
     </inertial>
   </link>
-  <!--リンク8-->
   <link name="link_008">
     <visual>
       <geometry>
-        <mesh filename="package://snake/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
-      <material name="silver">
-        <color rgba="0.75 0.75 0.75 1"/>
+      <material name="red">
+        <color rgba="0.7 0.0 0.0 1.0"/>
       </material>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </visual>
@@ -430,23 +410,22 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://snake/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
     <inertial>
-      <mass value="0.001"/>
-      <inertia ixx="1.2e-07" ixy="0" ixz="0" iyy="4.6e-08" iyz="0" izz="1.29e-07"/>
+      <mass value="0.005"/>
+      <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
     </inertial>
   </link>
-  <!--リンク9-->
   <link name="link_009">
     <visual>
       <geometry>
-        <mesh filename="package://snake/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
-      <material name="silver">
-        <color rgba="0.75 0.75 0.75 1"/>
+      <material name="red">
+        <color rgba="0.7 0.0 0.0 1.0"/>
       </material>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </visual>
@@ -454,23 +433,22 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://snake/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
     <inertial>
-      <mass value="0.001"/>
-      <inertia ixx="1.2e-07" ixy="0" ixz="0" iyy="4.6e-08" iyz="0" izz="1.29e-07"/>
+      <mass value="0.005"/>
+      <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
     </inertial>
   </link>
-  <!--リンク10-->
   <link name="link_010">
     <visual>
       <geometry>
-        <mesh filename="package://snake/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
-      <material name="silver">
-        <color rgba="0.75 0.75 0.75 1"/>
+      <material name="red">
+        <color rgba="0.7 0.0 0.0 1.0"/>
       </material>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </visual>
@@ -478,13 +456,13 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://snake/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
     <inertial>
-      <mass value="0.001"/>
-      <inertia ixx="1.2e-07" ixy="0" ixz="0" iyy="4.6e-08" iyz="0" izz="1.29e-07"/>
+      <mass value="0.005"/>
+      <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
     </inertial>
   </link>
   <!--ジョイント設定-->

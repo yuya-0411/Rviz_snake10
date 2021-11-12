@@ -21,505 +21,93 @@
 
 	<link name="base_link"/>
 
+
+<xacro:macro name="dynamixel_link" params="suffix">
+      <link name="${suffix}">
+
+      <visual>
+        <geometry>
+          <mesh filename = "${dynamixel}"/>
+        </geometry>
+        <material name="red">
+          <color rgba="0.7 0.0 0.0 1.0"/>
+        </material>
+              <origin rpy="0 0 0" xyz="0 0 0"/>
+      </visual>
+      
+      <!--物理的特性-->
+      <!--干渉-->
+      <collision>
+        <geometry>
+          <mesh filename = "${dynamixel}"/>
+        </geometry>
+      </collision>
+
+      <!--慣性-->
+      <inertial>
+        <mass value="${mass_d}"/>
+        <inertia ixx="${ixx_d}" iyy="${iyy_d}" izz="${izz_d}" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+    
+    </link>
+</xacro:macro>
+
 <!--Dynamixelの定義-->
-	<!--リンク1-->
-	<link name="dynamixel_001">
-		<visual>
-			<geometry>
-				<mesh filename = "${dynamixel}"/>
-			</geometry>
-			<material name="red">
-				<color rgba="0.7 0.0 0.0 1.0"/>
-			</material>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
-		</visual>
-        <!--物理的特性-->
-        <!--干渉-->
-        <collision>
-        	<geometry>
-            <mesh filename = "${dynamixel}"/>
-        	</geometry>
-        </collision>
-        <!--慣性-->
-        <inertial>
-        	<mass value="${mass_d}"/>
-        	<inertia ixx="${ixx_d}" iyy="${iyy_d}" izz="${izz_d}" ixy="0" ixz="0" iyz="0"/>
-        </inertial>
-	</link>
-	<!--リンク2-->
-	<link name="dynamixel_101">
-    <visual>
-      <geometry>
-        <mesh filename = "${dynamixel}"/>
-      </geometry>
-      <material name="red">
-        <color rgba="0.7 0.0 0.0 1.0"/>
-      </material>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
-    </visual>
-        <!--物理的特性-->
-        <!--干渉-->
-        <collision>
-          <geometry>
-            <mesh filename = "${dynamixel}"/>
-          </geometry>
-        </collision>
-        <!--慣性-->
-        <inertial>
-          <mass value="${mass_d}"/>
-          <inertia ixx="${ixx_d}" iyy="${iyy_d}" izz="${izz_d}" ixy="0" ixz="0" iyz="0"/>
-        </inertial>
-  </link>
-	<!--リンク3-->
-	<link name="dynamixel_002">
-    <visual>
-      <geometry>
-        <mesh filename = "${dynamixel}"/>
-      </geometry>
-      <material name="red">
-        <color rgba="0.7 0.0 0.0 1.0"/>
-      </material>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
-    </visual>
-        <!--物理的特性-->
-        <!--干渉-->
-        <collision>
-          <geometry>
-            <mesh filename = "${dynamixel}"/>
-          </geometry>
-        </collision>
-        <!--慣性-->
-        <inertial>
-          <mass value="${mass_d}"/>
-          <inertia ixx="${ixx_d}" iyy="${iyy_d}" izz="${izz_d}" ixy="0" ixz="0" iyz="0"/>
-        </inertial>
-  </link>
-	<!--リンク4-->
-	<link name="dynamixel_102">
-    <visual>
-      <geometry>
-        <mesh filename = "${dynamixel}"/>
-      </geometry>
-      <material name="red">
-        <color rgba="0.7 0.0 0.0 1.0"/>
-      </material>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
-    </visual>
-        <!--物理的特性-->
-        <!--干渉-->
-        <collision>
-          <geometry>
-            <mesh filename = "${dynamixel}"/>
-          </geometry>
-        </collision>
-        <!--慣性-->
-        <inertial>
-          <mass value="${mass_d}"/>
-          <inertia ixx="${ixx_d}" iyy="${iyy_d}" izz="${izz_d}" ixy="0" ixz="0" iyz="0"/>
-        </inertial>
-  </link>
-  <!--リンク5-->
-  <link name="dynamixel_003">
-    <visual>
-      <geometry>
-        <mesh filename = "${dynamixel}"/>
-      </geometry>
-      <material name="red">
-        <color rgba="0.7 0.0 0.0 1.0"/>
-      </material>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
-    </visual>
-        <!--物理的特性-->
-        <!--干渉-->
-        <collision>
-          <geometry>
-            <mesh filename = "${dynamixel}"/>
-          </geometry>
-        </collision>
-        <!--慣性-->
-        <inertial>
-          <mass value="${mass_d}"/>
-          <inertia ixx="${ixx_d}" iyy="${iyy_d}" izz="${izz_d}" ixy="0" ixz="0" iyz="0"/>
-        </inertial>
-  </link>
-  <!--リンク6-->
-  <link name="dynamixel_103">
-    <visual>
-      <geometry>
-        <mesh filename = "${dynamixel}"/>
-      </geometry>
-      <material name="red">
-        <color rgba="0.7 0.0 0.0 1.0"/>
-      </material>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
-    </visual>
-        <!--物理的特性-->
-        <!--干渉-->
-        <collision>
-          <geometry>
-            <mesh filename = "${dynamixel}"/>
-          </geometry>
-        </collision>
-        <!--慣性-->
-        <inertial>
-          <mass value="${mass_d}"/>
-          <inertia ixx="${ixx_d}" iyy="${iyy_d}" izz="${izz_d}" ixy="0" ixz="0" iyz="0"/>
-        </inertial>
-  </link>
-  <!--リンク7-->
-  <link name="dynamixel_004">
-    <visual>
-      <geometry>
-        <mesh filename = "${dynamixel}"/>
-      </geometry>
-      <material name="red">
-        <color rgba="0.7 0.0 0.0 1.0"/>
-      </material>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
-    </visual>
-        <!--物理的特性-->
-        <!--干渉-->
-        <collision>
-          <geometry>
-            <mesh filename = "${dynamixel}"/>
-          </geometry>
-        </collision>
-        <!--慣性-->
-        <inertial>
-          <mass value="${mass_d}"/>
-          <inertia ixx="${ixx_d}" iyy="${iyy_d}" izz="${izz_d}" ixy="0" ixz="0" iyz="0"/>
-        </inertial>
-  </link>
-  <!--リンク8-->
-  <link name="dynamixel_104">
-    <visual>
-      <geometry>
-        <mesh filename = "${dynamixel}"/>
-      </geometry>
-      <material name="red">
-        <color rgba="0.7 0.0 0.0 1.0"/>
-      </material>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
-    </visual>
-        <!--物理的特性-->
-        <!--干渉-->
-        <collision>
-          <geometry>
-            <mesh filename = "${dynamixel}"/>
-          </geometry>
-        </collision>
-        <!--慣性-->
-        <inertial>
-          <mass value="${mass_d}"/>
-          <inertia ixx="${ixx_d}" iyy="${iyy_d}" izz="${izz_d}" ixy="0" ixz="0" iyz="0"/>
-        </inertial>
-  </link>
-  <!--リンク9-->
-  <link name="dynamixel_005">
-    <visual>
-      <geometry>
-        <mesh filename = "${dynamixel}"/>
-      </geometry>
-      <material name="red">
-        <color rgba="0.7 0.0 0.0 1.0"/>
-      </material>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
-    </visual>
-        <!--物理的特性-->
-        <!--干渉-->
-        <collision>
-          <geometry>
-            <mesh filename = "${dynamixel}"/>
-          </geometry>
-        </collision>
-        <!--慣性-->
-        <inertial>
-          <mass value="${mass_d}"/>
-          <inertia ixx="${ixx_d}" iyy="${iyy_d}" izz="${izz_d}" ixy="0" ixz="0" iyz="0"/>
-        </inertial>
-  </link>
-  <!--リンク10-->
-  <link name="dynamixel_105">
-    <visual>
-      <geometry>
-        <mesh filename = "${dynamixel}"/>
-      </geometry>
-      <material name="red">
-        <color rgba="0.7 0.0 0.0 1.0"/>
-      </material>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
-    </visual>
-        <!--物理的特性-->
-        <!--干渉-->
-        <collision>
-          <geometry>
-            <mesh filename = "${dynamixel}"/>
-          </geometry>
-        </collision>
-        <!--慣性-->
-        <inertial>
-          <mass value="${mass_d}"/>
-          <inertia ixx="${ixx_d}" iyy="${iyy_d}" izz="${izz_d}" ixy="0" ixz="0" iyz="0"/>
-        </inertial>
-  </link>
+<!--リンク1~10-->
+<xacro:dynamixel_link suffix="dynamixel_001" />
+<xacro:dynamixel_link suffix="dynamixel_101" />
+<xacro:dynamixel_link suffix="dynamixel_002" />
+<xacro:dynamixel_link suffix="dynamixel_102" />
+<xacro:dynamixel_link suffix="dynamixel_003" />
+<xacro:dynamixel_link suffix="dynamixel_103" />
+<xacro:dynamixel_link suffix="dynamixel_004" />
+<xacro:dynamixel_link suffix="dynamixel_104" />
+<xacro:dynamixel_link suffix="dynamixel_005" />
+<xacro:dynamixel_link suffix="dynamixel_105" />
 
 
+<xacro:macro name="adaptor_link" params="suffix">
 
+    <link name="${suffix}">
+    <visual>
+      <geometry>
+        <mesh filename = "${adaptor}"/>
+      </geometry>
+      <material name="silver">
+        <color rgba="0.75 0.75 0.75 1"/>
+      </material>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
 
+    <!--物理的特性-->
+    <!--干渉-->
+    <collision>
+      <geometry>
+        <mesh filename = "${adaptor}"/>
+      </geometry>
+    </collision>
+
+    <!--慣性-->
+    <inertial>
+      <mass value="${mass_a}"/>
+      <inertia ixx="${ixx_a}" iyy="${iyy_a}" izz="${izz_a}" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+
+  </link>
+</xacro:macro>
 
 <!--アダプタの定義-->
-  <!--リンク1-->
-  <link name="link_001">
-    <visual>
-      <geometry>
-        <mesh filename = "${adaptor}"/>
-      </geometry>
-      <material name="silver">
-        <color rgba="0.75 0.75 0.75 1"/>
-      </material>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
-    </visual>
-        <!--物理的特性-->
-        <!--干渉-->
-        <collision>
-          <geometry>
-            <mesh filename = "${adaptor}"/>
-          </geometry>
-        </collision>
-        <!--慣性-->
-        <inertial>
-          <mass value="${mass_a}"/>
-          <inertia ixx="${ixx_a}" iyy="${iyy_a}" izz="${izz_a}" ixy="0" ixz="0" iyz="0"/>
-        </inertial>
-  </link>
-
-  <!--リンク2-->
-  <link name="link_002">
-    <visual>
-      <geometry>
-        <mesh filename = "${adaptor}"/>
-      </geometry>
-      <material name="silver">
-        <color rgba="0.75 0.75 0.75 1"/>
-      </material>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
-    </visual>
-        <!--物理的特性-->
-        <!--干渉-->
-        <collision>
-          <geometry>
-            <mesh filename = "${adaptor}"/>
-          </geometry>
-        </collision>
-        <!--慣性-->
-        <inertial>
-          <mass value="${mass_a}"/>
-          <inertia ixx="${ixx_a}" iyy="${iyy_a}" izz="${izz_a}" ixy="0" ixz="0" iyz="0"/>
-        </inertial>
-  </link>
-
-  <!--リンク3-->
-  <link name="link_003">
-    <visual>
-      <geometry>
-        <mesh filename = "${adaptor}"/>
-      </geometry>
-      <material name="silver">
-        <color rgba="0.75 0.75 0.75 1"/>
-      </material>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
-    </visual>
-        <!--物理的特性-->
-        <!--干渉-->
-        <collision>
-          <geometry>
-            <mesh filename = "${adaptor}"/>
-          </geometry>
-        </collision>
-        <!--慣性-->
-        <inertial>
-          <mass value="${mass_a}"/>
-          <inertia ixx="${ixx_a}" iyy="${iyy_a}" izz="${izz_a}" ixy="0" ixz="0" iyz="0"/>
-        </inertial>
-  </link>
-
-  <!--リンク4-->
-  <link name="link_004">
-    <visual>
-      <geometry>
-        <mesh filename = "${adaptor}"/>
-      </geometry>
-      <material name="silver">
-        <color rgba="0.75 0.75 0.75 1"/>
-      </material>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
-    </visual>
-        <!--物理的特性-->
-        <!--干渉-->
-        <collision>
-          <geometry>
-            <mesh filename = "${adaptor}"/>
-          </geometry>
-        </collision>
-        <!--慣性-->
-        <inertial>
-          <mass value="${mass_a}"/>
-          <inertia ixx="${ixx_a}" iyy="${iyy_a}" izz="${izz_a}" ixy="0" ixz="0" iyz="0"/>
-        </inertial>
-  </link>
-
-  <!--リンク5-->
-  <link name="link_005">
-    <visual>
-      <geometry>
-        <mesh filename = "${adaptor}"/>
-      </geometry>
-      <material name="silver">
-        <color rgba="0.75 0.75 0.75 1"/>
-      </material>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
-    </visual>
-        <!--物理的特性-->
-        <!--干渉-->
-        <collision>
-          <geometry>
-            <mesh filename = "${adaptor}"/>
-          </geometry>
-        </collision>
-        <!--慣性-->
-        <inertial>
-          <mass value="${mass_a}"/>
-          <inertia ixx="${ixx_a}" iyy="${iyy_a}" izz="${izz_a}" ixy="0" ixz="0" iyz="0"/>
-        </inertial>
-  </link>
-
-  <!--リンク6-->
-  <link name="link_006">
-    <visual>
-      <geometry>
-        <mesh filename = "${adaptor}"/>
-      </geometry>
-      <material name="silver">
-        <color rgba="0.75 0.75 0.75 1"/>
-      </material>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
-    </visual>
-        <!--物理的特性-->
-        <!--干渉-->
-        <collision>
-          <geometry>
-            <mesh filename = "${adaptor}"/>
-          </geometry>
-        </collision>
-        <!--慣性-->
-        <inertial>
-          <mass value="${mass_a}"/>
-          <inertia ixx="${ixx_a}" iyy="${iyy_a}" izz="${izz_a}" ixy="0" ixz="0" iyz="0"/>
-        </inertial>
-  </link>
-
-  <!--リンク7-->
-  <link name="link_007">
-    <visual>
-      <geometry>
-        <mesh filename = "${adaptor}"/>
-      </geometry>
-      <material name="silver">
-        <color rgba="0.75 0.75 0.75 1"/>
-      </material>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
-    </visual>
-        <!--物理的特性-->
-        <!--干渉-->
-        <collision>
-          <geometry>
-            <mesh filename = "${adaptor}"/>
-          </geometry>
-        </collision>
-        <!--慣性-->
-        <inertial>
-          <mass value="${mass_a}"/>
-          <inertia ixx="${ixx_a}" iyy="${iyy_a}" izz="${izz_a}" ixy="0" ixz="0" iyz="0"/>
-        </inertial>
-  </link>
-
-  <!--リンク8-->
-  <link name="link_008">
-    <visual>
-      <geometry>
-        <mesh filename = "${adaptor}"/>
-      </geometry>
-      <material name="silver">
-        <color rgba="0.75 0.75 0.75 1"/>
-      </material>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
-    </visual>
-        <!--物理的特性-->
-        <!--干渉-->
-        <collision>
-          <geometry>
-            <mesh filename = "${adaptor}"/>
-          </geometry>
-        </collision>
-        <!--慣性-->
-        <inertial>
-          <mass value="${mass_a}"/>
-          <inertia ixx="${ixx_a}" iyy="${iyy_a}" izz="${izz_a}" ixy="0" ixz="0" iyz="0"/>
-        </inertial>
-  </link>
-
-  <!--リンク9-->
-  <link name="link_009">
-    <visual>
-      <geometry>
-        <mesh filename = "${adaptor}"/>
-      </geometry>
-      <material name="silver">
-        <color rgba="0.75 0.75 0.75 1"/>
-      </material>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
-    </visual>
-        <!--物理的特性-->
-        <!--干渉-->
-        <collision>
-          <geometry>
-            <mesh filename = "${adaptor}"/>
-          </geometry>
-        </collision>
-        <!--慣性-->
-        <inertial>
-          <mass value="${mass_a}"/>
-          <inertia ixx="${ixx_a}" iyy="${iyy_a}" izz="${izz_a}" ixy="0" ixz="0" iyz="0"/>
-        </inertial>
-  </link>
-
-  <!--リンク10-->
-  <link name="link_010">
-    <visual>
-      <geometry>
-        <mesh filename = "${adaptor}"/>
-      </geometry>
-      <material name="silver">
-        <color rgba="0.75 0.75 0.75 1"/>
-      </material>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
-    </visual>
-        <!--物理的特性-->
-        <!--干渉-->
-        <collision>
-          <geometry>
-            <mesh filename = "${adaptor}"/>
-          </geometry>
-        </collision>
-        <!--慣性-->
-        <inertial>
-          <mass value="${mass_a}"/>
-          <inertia ixx="${ixx_a}" iyy="${iyy_a}" izz="${izz_a}" ixy="0" ixz="0" iyz="0"/>
-        </inertial>
-  </link>
-
-
-
+<!--リンク1-10 -->
+<xacro:dynamixel_link suffix="link_001" />
+<xacro:dynamixel_link suffix="link_002" />
+<xacro:dynamixel_link suffix="link_003" />
+<xacro:dynamixel_link suffix="link_004" />
+<xacro:dynamixel_link suffix="link_005" />
+<xacro:dynamixel_link suffix="link_006" />
+<xacro:dynamixel_link suffix="link_007" />
+<xacro:dynamixel_link suffix="link_008" />
+<xacro:dynamixel_link suffix="link_009" />
+<xacro:dynamixel_link suffix="link_010" />
 
 	<!--ジョイント設定-->
 	<!--ワールドとリンク1-->
