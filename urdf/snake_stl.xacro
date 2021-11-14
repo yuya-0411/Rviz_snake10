@@ -1,5 +1,5 @@
 <robot name="test_robot" xmlns:xacro="http://ros.org/wiki/xacro">
-  <xacro:property name="dynamixel" value="package://fall_sim_001/mesh/dynamixel.stl"/> 
+  <xacro:property name="dynamixel" value="package://snake/mesh/dynamixel.stl"/> 
   <xacro:property name="mass_d" value="0.023967239474" />
   <xacro:property name="width_d" value="0.024" />
   <xacro:property name="depth_d" value="0.024" />
@@ -9,7 +9,7 @@
   <xacro:property name="izz_d" value="0.0000025171567719" />
   <xacro:property name="gear" value="1" />
 
-  <xacro:property name="adaptor" value="package://fall_sim_001/mesh/adaptor.stl"/>
+  <xacro:property name="adaptor" value="package://snake/mesh/adaptor.stl"/>
   <xacro:property name="mass_a" value="0.0060293114415" />
   <xacro:property name="width_a" value="0.018" />
   <xacro:property name="depth_a" value="0.035" />

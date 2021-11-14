@@ -11,7 +11,7 @@
     <!-- 見た目 -->
     <visual>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
       <material name="red">
         <color rgba="0.7 0.0 0.0 1.0"/>
@@ -22,7 +22,7 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
@@ -36,7 +36,7 @@
     <!-- 見た目 -->
     <visual>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
       <material name="red">
         <color rgba="0.7 0.0 0.0 1.0"/>
@@ -47,7 +47,7 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
@@ -61,7 +61,7 @@
     <!-- 見た目 -->
     <visual>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
       <material name="red">
         <color rgba="0.7 0.0 0.0 1.0"/>
@@ -72,7 +72,7 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
@@ -86,7 +86,7 @@
     <!-- 見た目 -->
     <visual>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
       <material name="red">
         <color rgba="0.7 0.0 0.0 1.0"/>
@@ -97,7 +97,7 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
@@ -111,7 +111,7 @@
     <!-- 見た目 -->
     <visual>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
       <material name="red">
         <color rgba="0.7 0.0 0.0 1.0"/>
@@ -122,7 +122,7 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
@@ -136,7 +136,7 @@
     <!-- 見た目 -->
     <visual>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
       <material name="red">
         <color rgba="0.7 0.0 0.0 1.0"/>
@@ -147,7 +147,7 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
@@ -161,7 +161,7 @@
     <!-- 見た目 -->
     <visual>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
       <material name="red">
         <color rgba="0.7 0.0 0.0 1.0"/>
@@ -172,7 +172,7 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
@@ -186,7 +186,7 @@
     <!-- 見た目 -->
     <visual>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
       <material name="red">
         <color rgba="0.7 0.0 0.0 1.0"/>
@@ -197,7 +197,7 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
@@ -211,7 +211,7 @@
     <!-- 見た目 -->
     <visual>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
       <material name="red">
         <color rgba="0.7 0.0 0.0 1.0"/>
@@ -222,7 +222,7 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
@@ -236,7 +236,7 @@
     <!-- 見た目 -->
     <visual>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
       <material name="red">
         <color rgba="0.7 0.0 0.0 1.0"/>
@@ -247,7 +247,7 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
+        <mesh filename="package://snake/mesh/dynamixel.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
@@ -259,7 +259,7 @@
   <link name="bracket_001">
     <visual>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/adaptor.stl"/>
       </geometry>
       <material name="silver">
         <color rgba="0.75 0.75 0.75 1"/>
@@ -270,7 +270,7 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/adaptor.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
@@ -282,7 +282,7 @@
   <link name="bracket_002">
     <visual>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/adaptor.stl"/>
       </geometry>
       <material name="silver">
         <color rgba="0.75 0.75 0.75 1"/>
@@ -293,7 +293,7 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/adaptor.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
@@ -305,7 +305,7 @@
   <link name="bracket_003">
     <visual>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/adaptor.stl"/>
       </geometry>
       <material name="silver">
         <color rgba="0.75 0.75 0.75 1"/>
@@ -316,7 +316,7 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/adaptor.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
@@ -328,7 +328,7 @@
   <link name="bracket_004">
     <visual>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/adaptor.stl"/>
       </geometry>
       <material name="silver">
         <color rgba="0.75 0.75 0.75 1"/>
@@ -339,7 +339,7 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/adaptor.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
@@ -351,7 +351,7 @@
   <link name="bracket_005">
     <visual>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/adaptor.stl"/>
       </geometry>
       <material name="silver">
         <color rgba="0.75 0.75 0.75 1"/>
@@ -362,7 +362,7 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/adaptor.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
@@ -374,7 +374,7 @@
   <link name="bracket_006">
     <visual>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/adaptor.stl"/>
       </geometry>
       <material name="silver">
         <color rgba="0.75 0.75 0.75 1"/>
@@ -385,7 +385,7 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/adaptor.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
@@ -397,7 +397,7 @@
   <link name="bracket_007">
     <visual>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/adaptor.stl"/>
       </geometry>
       <material name="silver">
         <color rgba="0.75 0.75 0.75 1"/>
@@ -408,7 +408,7 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/adaptor.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
@@ -420,7 +420,7 @@
   <link name="bracket_008">
     <visual>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/adaptor.stl"/>
       </geometry>
       <material name="silver">
         <color rgba="0.75 0.75 0.75 1"/>
@@ -431,7 +431,7 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/adaptor.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
@@ -443,7 +443,7 @@
   <link name="bracket_009">
     <visual>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/adaptor.stl"/>
       </geometry>
       <material name="silver">
         <color rgba="0.75 0.75 0.75 1"/>
@@ -454,7 +454,7 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/adaptor.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
@@ -466,7 +466,7 @@
   <link name="bracket_010">
     <visual>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/adaptor.stl"/>
       </geometry>
       <material name="silver">
         <color rgba="0.75 0.75 0.75 1"/>
@@ -477,7 +477,7 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
+        <mesh filename="package://snake/mesh/adaptor.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
