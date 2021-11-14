@@ -4,11 +4,14 @@
 <!-- |    EDITING THIS FILE BY HAND IS NOT RECOMMENDED                                 | -->
 <!-- =================================================================================== -->
 <robot name="test_robot">
-  <link name="base_link"/>
+  <link name="world"/>
+  <!-- マクロ関数の定義 -->
+  <!-- link名 -->
   <link name="dynamixel_001">
+    <!-- 見た目 -->
     <visual>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
       </geometry>
       <material name="red">
         <color rgba="0.7 0.0 0.0 1.0"/>
@@ -19,19 +22,21 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
     <inertial>
-      <mass value="0.005"/>
-      <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
+      <mass value="0.023967239474"/>
+      <inertia ixx="3.5392036062e-06" ixy="0" ixz="0" iyy="3.2067700889e-06" iyz="0" izz="2.5171567719e-06"/>
     </inertial>
   </link>
+  <!-- link名 -->
   <link name="dynamixel_101">
+    <!-- 見た目 -->
     <visual>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
       </geometry>
       <material name="red">
         <color rgba="0.7 0.0 0.0 1.0"/>
@@ -42,19 +47,21 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
     <inertial>
-      <mass value="0.005"/>
-      <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
+      <mass value="0.023967239474"/>
+      <inertia ixx="3.5392036062e-06" ixy="0" ixz="0" iyy="3.2067700889e-06" iyz="0" izz="2.5171567719e-06"/>
     </inertial>
   </link>
+  <!-- link名 -->
   <link name="dynamixel_002">
+    <!-- 見た目 -->
     <visual>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
       </geometry>
       <material name="red">
         <color rgba="0.7 0.0 0.0 1.0"/>
@@ -65,19 +72,21 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
     <inertial>
-      <mass value="0.005"/>
-      <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
+      <mass value="0.023967239474"/>
+      <inertia ixx="3.5392036062e-06" ixy="0" ixz="0" iyy="3.2067700889e-06" iyz="0" izz="2.5171567719e-06"/>
     </inertial>
   </link>
+  <!-- link名 -->
   <link name="dynamixel_102">
+    <!-- 見た目 -->
     <visual>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
       </geometry>
       <material name="red">
         <color rgba="0.7 0.0 0.0 1.0"/>
@@ -88,19 +97,21 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
     <inertial>
-      <mass value="0.005"/>
-      <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
+      <mass value="0.023967239474"/>
+      <inertia ixx="3.5392036062e-06" ixy="0" ixz="0" iyy="3.2067700889e-06" iyz="0" izz="2.5171567719e-06"/>
     </inertial>
   </link>
+  <!-- link名 -->
   <link name="dynamixel_003">
+    <!-- 見た目 -->
     <visual>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
       </geometry>
       <material name="red">
         <color rgba="0.7 0.0 0.0 1.0"/>
@@ -111,19 +122,21 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
     <inertial>
-      <mass value="0.005"/>
-      <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
+      <mass value="0.023967239474"/>
+      <inertia ixx="3.5392036062e-06" ixy="0" ixz="0" iyy="3.2067700889e-06" iyz="0" izz="2.5171567719e-06"/>
     </inertial>
   </link>
+  <!-- link名 -->
   <link name="dynamixel_103">
+    <!-- 見た目 -->
     <visual>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
       </geometry>
       <material name="red">
         <color rgba="0.7 0.0 0.0 1.0"/>
@@ -134,19 +147,21 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
     <inertial>
-      <mass value="0.005"/>
-      <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
+      <mass value="0.023967239474"/>
+      <inertia ixx="3.5392036062e-06" ixy="0" ixz="0" iyy="3.2067700889e-06" iyz="0" izz="2.5171567719e-06"/>
     </inertial>
   </link>
+  <!-- link名 -->
   <link name="dynamixel_004">
+    <!-- 見た目 -->
     <visual>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
       </geometry>
       <material name="red">
         <color rgba="0.7 0.0 0.0 1.0"/>
@@ -157,19 +172,21 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
     <inertial>
-      <mass value="0.005"/>
-      <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
+      <mass value="0.023967239474"/>
+      <inertia ixx="3.5392036062e-06" ixy="0" ixz="0" iyy="3.2067700889e-06" iyz="0" izz="2.5171567719e-06"/>
     </inertial>
   </link>
+  <!-- link名 -->
   <link name="dynamixel_104">
+    <!-- 見た目 -->
     <visual>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
       </geometry>
       <material name="red">
         <color rgba="0.7 0.0 0.0 1.0"/>
@@ -180,19 +197,21 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
     <inertial>
-      <mass value="0.005"/>
-      <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
+      <mass value="0.023967239474"/>
+      <inertia ixx="3.5392036062e-06" ixy="0" ixz="0" iyy="3.2067700889e-06" iyz="0" izz="2.5171567719e-06"/>
     </inertial>
   </link>
+  <!-- link名 -->
   <link name="dynamixel_005">
+    <!-- 見た目 -->
     <visual>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
       </geometry>
       <material name="red">
         <color rgba="0.7 0.0 0.0 1.0"/>
@@ -203,19 +222,21 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
     <inertial>
-      <mass value="0.005"/>
-      <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
+      <mass value="0.023967239474"/>
+      <inertia ixx="3.5392036062e-06" ixy="0" ixz="0" iyy="3.2067700889e-06" iyz="0" izz="2.5171567719e-06"/>
     </inertial>
   </link>
+  <!-- link名 -->
   <link name="dynamixel_105">
+    <!-- 見た目 -->
     <visual>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
       </geometry>
       <material name="red">
         <color rgba="0.7 0.0 0.0 1.0"/>
@@ -226,22 +247,22 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/dynamixel.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
     <inertial>
-      <mass value="0.005"/>
-      <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
+      <mass value="0.023967239474"/>
+      <inertia ixx="3.5392036062e-06" ixy="0" ixz="0" iyy="3.2067700889e-06" iyz="0" izz="2.5171567719e-06"/>
     </inertial>
   </link>
-  <link name="link_001">
+  <link name="bracket_001">
     <visual>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
       </geometry>
-      <material name="red">
-        <color rgba="0.7 0.0 0.0 1.0"/>
+      <material name="silver">
+        <color rgba="0.75 0.75 0.75 1"/>
       </material>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </visual>
@@ -249,22 +270,22 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
     <inertial>
-      <mass value="0.005"/>
-      <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
+      <mass value="0.0060293114415"/>
+      <inertia ixx="1.4057440439e-06" ixy="0" ixz="0" iyy="1.144769055e-06" iyz="0" izz="5.779531603e-07"/>
     </inertial>
   </link>
-  <link name="link_002">
+  <link name="bracket_002">
     <visual>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
       </geometry>
-      <material name="red">
-        <color rgba="0.7 0.0 0.0 1.0"/>
+      <material name="silver">
+        <color rgba="0.75 0.75 0.75 1"/>
       </material>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </visual>
@@ -272,22 +293,22 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
     <inertial>
-      <mass value="0.005"/>
-      <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
+      <mass value="0.0060293114415"/>
+      <inertia ixx="1.4057440439e-06" ixy="0" ixz="0" iyy="1.144769055e-06" iyz="0" izz="5.779531603e-07"/>
     </inertial>
   </link>
-  <link name="link_003">
+  <link name="bracket_003">
     <visual>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
       </geometry>
-      <material name="red">
-        <color rgba="0.7 0.0 0.0 1.0"/>
+      <material name="silver">
+        <color rgba="0.75 0.75 0.75 1"/>
       </material>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </visual>
@@ -295,22 +316,22 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
     <inertial>
-      <mass value="0.005"/>
-      <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
+      <mass value="0.0060293114415"/>
+      <inertia ixx="1.4057440439e-06" ixy="0" ixz="0" iyy="1.144769055e-06" iyz="0" izz="5.779531603e-07"/>
     </inertial>
   </link>
-  <link name="link_004">
+  <link name="bracket_004">
     <visual>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
       </geometry>
-      <material name="red">
-        <color rgba="0.7 0.0 0.0 1.0"/>
+      <material name="silver">
+        <color rgba="0.75 0.75 0.75 1"/>
       </material>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </visual>
@@ -318,22 +339,22 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
     <inertial>
-      <mass value="0.005"/>
-      <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
+      <mass value="0.0060293114415"/>
+      <inertia ixx="1.4057440439e-06" ixy="0" ixz="0" iyy="1.144769055e-06" iyz="0" izz="5.779531603e-07"/>
     </inertial>
   </link>
-  <link name="link_005">
+  <link name="bracket_005">
     <visual>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
       </geometry>
-      <material name="red">
-        <color rgba="0.7 0.0 0.0 1.0"/>
+      <material name="silver">
+        <color rgba="0.75 0.75 0.75 1"/>
       </material>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </visual>
@@ -341,22 +362,22 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
     <inertial>
-      <mass value="0.005"/>
-      <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
+      <mass value="0.0060293114415"/>
+      <inertia ixx="1.4057440439e-06" ixy="0" ixz="0" iyy="1.144769055e-06" iyz="0" izz="5.779531603e-07"/>
     </inertial>
   </link>
-  <link name="link_006">
+  <link name="bracket_006">
     <visual>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
       </geometry>
-      <material name="red">
-        <color rgba="0.7 0.0 0.0 1.0"/>
+      <material name="silver">
+        <color rgba="0.75 0.75 0.75 1"/>
       </material>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </visual>
@@ -364,22 +385,22 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
     <inertial>
-      <mass value="0.005"/>
-      <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
+      <mass value="0.0060293114415"/>
+      <inertia ixx="1.4057440439e-06" ixy="0" ixz="0" iyy="1.144769055e-06" iyz="0" izz="5.779531603e-07"/>
     </inertial>
   </link>
-  <link name="link_007">
+  <link name="bracket_007">
     <visual>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
       </geometry>
-      <material name="red">
-        <color rgba="0.7 0.0 0.0 1.0"/>
+      <material name="silver">
+        <color rgba="0.75 0.75 0.75 1"/>
       </material>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </visual>
@@ -387,22 +408,22 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
     <inertial>
-      <mass value="0.005"/>
-      <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
+      <mass value="0.0060293114415"/>
+      <inertia ixx="1.4057440439e-06" ixy="0" ixz="0" iyy="1.144769055e-06" iyz="0" izz="5.779531603e-07"/>
     </inertial>
   </link>
-  <link name="link_008">
+  <link name="bracket_008">
     <visual>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
       </geometry>
-      <material name="red">
-        <color rgba="0.7 0.0 0.0 1.0"/>
+      <material name="silver">
+        <color rgba="0.75 0.75 0.75 1"/>
       </material>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </visual>
@@ -410,22 +431,22 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
     <inertial>
-      <mass value="0.005"/>
-      <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
+      <mass value="0.0060293114415"/>
+      <inertia ixx="1.4057440439e-06" ixy="0" ixz="0" iyy="1.144769055e-06" iyz="0" izz="5.779531603e-07"/>
     </inertial>
   </link>
-  <link name="link_009">
+  <link name="bracket_009">
     <visual>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
       </geometry>
-      <material name="red">
-        <color rgba="0.7 0.0 0.0 1.0"/>
+      <material name="silver">
+        <color rgba="0.75 0.75 0.75 1"/>
       </material>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </visual>
@@ -433,22 +454,22 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
     <inertial>
-      <mass value="0.005"/>
-      <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
+      <mass value="0.0060293114415"/>
+      <inertia ixx="1.4057440439e-06" ixy="0" ixz="0" iyy="1.144769055e-06" iyz="0" izz="5.779531603e-07"/>
     </inertial>
   </link>
-  <link name="link_010">
+  <link name="bracket_010">
     <visual>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
       </geometry>
-      <material name="red">
-        <color rgba="0.7 0.0 0.0 1.0"/>
+      <material name="silver">
+        <color rgba="0.75 0.75 0.75 1"/>
       </material>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </visual>
@@ -456,328 +477,146 @@
     <!--干渉-->
     <collision>
       <geometry>
-        <mesh filename="package://snake/mesh/dynamixel.stl"/>
+        <mesh filename="package://fall_sim_001/mesh/adaptor.stl"/>
       </geometry>
     </collision>
     <!--慣性-->
     <inertial>
-      <mass value="0.005"/>
-      <inertia ixx="7.8e-07" ixy="0" ixz="0" iyy="7.8e-07" iyz="0" izz="4.8e-07"/>
+      <mass value="0.0060293114415"/>
+      <inertia ixx="1.4057440439e-06" ixy="0" ixz="0" iyy="1.144769055e-06" iyz="0" izz="5.779531603e-07"/>
     </inertial>
   </link>
-  <!--ジョイント設定-->
+  <!--ジョイントの定義-->
   <!--ワールドとリンク1-->
   <joint name="fixed_000" type="fixed">
-    <parent link="base_link"/>
+    <parent link="world"/>
     <child link="dynamixel_001"/>
     <origin rpy="0 0 -1.57079632679" xyz="0 0 0"/>
     <limit effort="0" lower="-1.57079632679" upper="1.57079632679" velocity="0"/>
   </joint>
-  <!--Dynamixel1とリンク1-->
   <joint name="joint_001" type="revolute">
     <axis xyz="0 1 0"/>
-    <!--pitch-->
     <parent link="dynamixel_001"/>
-    <child link="link_001"/>
+    <child link="bracket_001"/>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <limit effort="0" lower="-1.57079632679" upper="1.57079632679" velocity="0"/>
   </joint>
-  <!--リンク1とDynamixel101-->
   <joint name="fixed_001" type="fixed">
-    <parent link="link_001"/>
+    <parent link="bracket_001"/>
     <child link="dynamixel_101"/>
     <origin rpy="1.57079632679 0 0" xyz="0.046 0 0"/>
     <limit effort="0" lower="-1.57079632679" upper="1.57079632679" velocity="0"/>
   </joint>
-  <!--Dynamixel101とリンク2-->
   <joint name="joint_002" type="revolute">
     <axis xyz="0 1 0"/>
-    <!--yaw-->
     <parent link="dynamixel_101"/>
-    <child link="link_002"/>
+    <child link="bracket_002"/>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <limit effort="0" lower="-1.57079632679" upper="1.57079632679" velocity="0"/>
   </joint>
-  <!--リンク2とDynamixel2-->
   <joint name="fixed_002" type="fixed">
-    <parent link="link_002"/>
+    <parent link="bracket_002"/>
     <child link="dynamixel_002"/>
     <origin rpy="-1.57079632679 0 0" xyz="0.046 0 0"/>
     <limit effort="0" lower="-1.57079632679" upper="1.57079632679" velocity="0"/>
   </joint>
-  <!--Dynamixel2とリンク3-->
   <joint name="joint_003" type="revolute">
     <axis xyz="0 1 0"/>
-    <!--pitch-->
     <parent link="dynamixel_002"/>
-    <child link="link_003"/>
+    <child link="bracket_003"/>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <limit effort="0" lower="-1.57079632679" upper="1.57079632679" velocity="0"/>
   </joint>
-  <!--リンク3とDynamixel102-->
   <joint name="fixed_003" type="fixed">
-    <parent link="link_003"/>
+    <parent link="bracket_003"/>
     <child link="dynamixel_102"/>
     <origin rpy="1.57079632679 0 0" xyz="0.046 0 0"/>
     <limit effort="0" lower="-1.57079632679" upper="1.57079632679" velocity="0"/>
   </joint>
-  <!--Dynamixel102とリンク4-->
   <joint name="joint_004" type="revolute">
     <axis xyz="0 1 0"/>
-    <!--yaw-->
     <parent link="dynamixel_102"/>
-    <child link="link_004"/>
+    <child link="bracket_004"/>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <limit effort="0" lower="-1.57079632679" upper="1.57079632679" velocity="0"/>
   </joint>
-  <!--リンク4とDynamixel3-->
   <joint name="fixed_004" type="fixed">
-    <parent link="link_004"/>
+    <parent link="bracket_004"/>
     <child link="dynamixel_003"/>
     <origin rpy="-1.57079632679 0 0" xyz="0.046 0 0"/>
     <limit effort="0" lower="-1.57079632679" upper="1.57079632679" velocity="0"/>
   </joint>
-  <!--Dynamixel3とリンク5-->
   <joint name="joint_005" type="revolute">
     <axis xyz="0 1 0"/>
-    <!--pitch-->
     <parent link="dynamixel_003"/>
-    <child link="link_005"/>
+    <child link="bracket_005"/>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <limit effort="0" lower="-1.57079632679" upper="1.57079632679" velocity="0"/>
   </joint>
-  <!--リンク5とDynamixel103-->
   <joint name="fixed_005" type="fixed">
-    <parent link="link_005"/>
+    <parent link="bracket_005"/>
     <child link="dynamixel_103"/>
     <origin rpy="1.57079632679 0 0" xyz="0.046 0 0"/>
     <limit effort="0" lower="-1.57079632679" upper="1.57079632679" velocity="0"/>
   </joint>
-  <!--Dynamixel103とリンク6-->
   <joint name="joint_006" type="revolute">
     <axis xyz="0 1 0"/>
-    <!--yaw-->
     <parent link="dynamixel_103"/>
-    <child link="link_006"/>
+    <child link="bracket_006"/>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <limit effort="0" lower="-1.57079632679" upper="1.57079632679" velocity="0"/>
   </joint>
-  <!--リンク6とDynamixel4-->
   <joint name="fixed_006" type="fixed">
-    <parent link="link_006"/>
+    <parent link="bracket_006"/>
     <child link="dynamixel_004"/>
     <origin rpy="-1.57079632679 0 0" xyz="0.046 0 0"/>
     <limit effort="0" lower="-1.57079632679" upper="1.57079632679" velocity="0"/>
   </joint>
-  <!--Dynamixel4とリンク7-->
   <joint name="joint_007" type="revolute">
     <axis xyz="0 1 0"/>
-    <!--pitch-->
     <parent link="dynamixel_004"/>
-    <child link="link_007"/>
+    <child link="bracket_007"/>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <limit effort="0" lower="-1.57079632679" upper="1.57079632679" velocity="0"/>
   </joint>
-  <!--リンク7とDynamixel104-->
   <joint name="fixed_007" type="fixed">
-    <parent link="link_007"/>
+    <parent link="bracket_007"/>
     <child link="dynamixel_104"/>
     <origin rpy="1.57079632679 0 0" xyz="0.046 0 0"/>
     <limit effort="0" lower="-1.57079632679" upper="1.57079632679" velocity="0"/>
   </joint>
-  <!--Dynamixel104とリンク8-->
   <joint name="joint_008" type="revolute">
     <axis xyz="0 1 0"/>
-    <!--yaw-->
     <parent link="dynamixel_104"/>
-    <child link="link_008"/>
+    <child link="bracket_008"/>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <limit effort="0" lower="-1.57079632679" upper="1.57079632679" velocity="0"/>
   </joint>
-  <!--リンク8とDynamixel5-->
   <joint name="fixed_008" type="fixed">
-    <parent link="link_008"/>
+    <parent link="bracket_008"/>
     <child link="dynamixel_005"/>
     <origin rpy="-1.57079632679 0 0" xyz="0.046 0 0"/>
     <limit effort="0" lower="-1.57079632679" upper="1.57079632679" velocity="0"/>
   </joint>
-  <!--Dynamixel5とリンク9-->
   <joint name="joint_009" type="revolute">
     <axis xyz="0 1 0"/>
-    <!--pitch-->
     <parent link="dynamixel_005"/>
-    <child link="link_009"/>
+    <child link="bracket_009"/>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <limit effort="0" lower="-1.57079632679" upper="1.57079632679" velocity="0"/>
   </joint>
-  <!--リンク9とDynamixel105-->
   <joint name="fixed_009" type="fixed">
-    <parent link="link_009"/>
+    <parent link="bracket_009"/>
     <child link="dynamixel_105"/>
     <origin rpy="1.57079632679 0 0" xyz="0.046 0 0"/>
     <limit effort="0" lower="-1.57079632679" upper="1.57079632679" velocity="0"/>
   </joint>
-  <!--Dynamixel105とリンク10-->
   <joint name="joint_010" type="revolute">
     <axis xyz="0 1 0"/>
-    <!--yaw-->
     <parent link="dynamixel_105"/>
-    <child link="link_010"/>
+    <child link="bracket_010"/>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <limit effort="0" lower="-1.57079632679" upper="1.57079632679" velocity="0"/>
   </joint>
-  <!--トランスミッションの追加-->
-  <!--リンク1とリンク2-->
-  <transmission name="trans_001">
-    <type>transmission_interface/SimpleTransmission</type>
-    <!--関節の指定-->
-    <joint name="joint_001">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-    </joint>
-    <!--アクチュエータの定義（ギア比1の減速機）-->
-    <actuator name="motor_001">
-      <hardwareInterface>PositionJointInterface</hardwareInterface>
-      <mechanicalReduction>&quot;1&quot;</mechanicalReduction>
-    </actuator>
-  </transmission>
-  <!--リンク2とリンク3-->
-  <transmission name="trans_002">
-    <type>transmission_interface/SimpleTransmission</type>
-    <!--関節の指定-->
-    <joint name="joint_002">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-    </joint>
-    <!--アクチュエータの定義（ギア比1の減速機）-->
-    <actuator name="motor_002">
-      <hardwareInterface>PositionJointInterface</hardwareInterface>
-      <mechanicalReduction>1&quot;</mechanicalReduction>
-    </actuator>
-  </transmission>
-  <!--リンク3とリンク4-->
-  <transmission name="trans_003">
-    <type>transmission_interface/SimpleTransmission</type>
-    <!--関節の指定-->
-    <joint name="joint_003">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-    </joint>
-    <!--アクチュエータの定義（ギア比1の減速機）-->
-    <actuator name="motor_003">
-      <hardwareInterface>PositionJointInterface</hardwareInterface>
-      <mechanicalReduction>1&quot;</mechanicalReduction>
-    </actuator>
-  </transmission>
-  <!--リンク4とリンク5-->
-  <transmission name="trans_004">
-    <type>transmission_interface/SimpleTransmission</type>
-    <!--関節の指定-->
-    <joint name="joint_004">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-    </joint>
-    <!--アクチュエータの定義（ギア比1の減速機）-->
-    <actuator name="motor_004">
-      <hardwareInterface>PositionJointInterface</hardwareInterface>
-      <mechanicalReduction>1&quot;</mechanicalReduction>
-    </actuator>
-  </transmission>
-  <!--リンク5とリンク6-->
-  <transmission name="trans_005">
-    <type>transmission_interface/SimpleTransmission</type>
-    <!--関節の指定-->
-    <joint name="joint_005">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-    </joint>
-    <!--アクチュエータの定義（ギア比1の減速機）-->
-    <actuator name="motor_005">
-      <hardwareInterface>PositionJointInterface</hardwareInterface>
-      <mechanicalReduction>1&quot;</mechanicalReduction>
-    </actuator>
-  </transmission>
-  <!--リンク6とリンク7-->
-  <transmission name="trans_006">
-    <type>transmission_interface/SimpleTransmission</type>
-    <!--関節の指定-->
-    <joint name="joint_006">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-    </joint>
-    <!--アクチュエータの定義（ギア比1の減速機）-->
-    <actuator name="motor_006">
-      <hardwareInterface>PositionJointInterface</hardwareInterface>
-      <mechanicalReduction>1&quot;</mechanicalReduction>
-    </actuator>
-  </transmission>
-  <!--リンク7とリンク8-->
-  <transmission name="trans_007">
-    <type>transmission_interface/SimpleTransmission</type>
-    <!--関節の指定-->
-    <joint name="joint_007">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-    </joint>
-    <!--アクチュエータの定義（ギア比1の減速機）-->
-    <actuator name="motor_007">
-      <hardwareInterface>PositionJointInterface</hardwareInterface>
-      <mechanicalReduction>1&quot;</mechanicalReduction>
-    </actuator>
-  </transmission>
-  <!--リンク8とリンク9-->
-  <transmission name="trans_008">
-    <type>transmission_interface/SimpleTransmission</type>
-    <!--関節の指定-->
-    <joint name="joint_008">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-    </joint>
-    <!--アクチュエータの定義（ギア比1の減速機）-->
-    <actuator name="motor_008">
-      <hardwareInterface>PositionJointInterface</hardwareInterface>
-      <mechanicalReduction>1&quot;</mechanicalReduction>
-    </actuator>
-  </transmission>
-  <!--リンク9とリンク10-->
-  <transmission name="trans_009">
-    <type>transmission_interface/SimpleTransmission</type>
-    <!--関節の指定-->
-    <joint name="joint_009">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-    </joint>
-    <!--アクチュエータの定義（ギア比1の減速機）-->
-    <actuator name="motor_009">
-      <hardwareInterface>PositionJointInterface</hardwareInterface>
-      <mechanicalReduction>1&quot;</mechanicalReduction>
-    </actuator>
-  </transmission>
-  <!--リンク9とリンク10-->
-  <transmission name="trans_010">
-    <type>transmission_interface/SimpleTransmission</type>
-    <!--関節の指定-->
-    <joint name="joint_010">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-    </joint>
-    <!--アクチュエータの定義（ギア比1の減速機）-->
-    <actuator name="motor_010">
-      <hardwareInterface>PositionJointInterface</hardwareInterface>
-      <mechanicalReduction>1&quot;</mechanicalReduction>
-    </actuator>
-  </transmission>
-  <!--機能的な部分をロードするための追加要素-->
-  <gazebo>
-    <plugin filename="libgazebo_ros_control.so" name="control"/>
-  </gazebo>
-  <gazebo>
-    <!--関節状態配信プラグインを指定-->
-    <plugin filename="libgazebo_ros_joint_state_publisher.so" name="joint_state_publisher">
-      <!--対象とする関節名を指定-->
-      <jointName>
-          joint_001,
-          joint_002,
-          joint_003,
-          joint_004,
-          joint_005,
-          joint_006,
-          joint_007,
-          joint_008,
-          joint_009,
-          joint_010
-        </jointName>
-    </plugin>
-  </gazebo>
 </robot>
 
