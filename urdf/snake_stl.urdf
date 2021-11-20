@@ -276,7 +276,7 @@
     <!--慣性-->
     <inertial>
       <mass value="0.0060293114415"/>
-      <inertia ixx="1.4057440439e-06" ixy="0" ixz="0" iyy="1.144769055e-06" iyz="0" izz="5.779531603e-07"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
     </inertial>
   </link>
   <link name="bracket_002">
@@ -299,7 +299,7 @@
     <!--慣性-->
     <inertial>
       <mass value="0.0060293114415"/>
-      <inertia ixx="1.4057440439e-06" ixy="0" ixz="0" iyy="1.144769055e-06" iyz="0" izz="5.779531603e-07"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
     </inertial>
   </link>
   <link name="bracket_003">
@@ -322,7 +322,7 @@
     <!--慣性-->
     <inertial>
       <mass value="0.0060293114415"/>
-      <inertia ixx="1.4057440439e-06" ixy="0" ixz="0" iyy="1.144769055e-06" iyz="0" izz="5.779531603e-07"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
     </inertial>
   </link>
   <link name="bracket_004">
@@ -345,7 +345,7 @@
     <!--慣性-->
     <inertial>
       <mass value="0.0060293114415"/>
-      <inertia ixx="1.4057440439e-06" ixy="0" ixz="0" iyy="1.144769055e-06" iyz="0" izz="5.779531603e-07"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
     </inertial>
   </link>
   <link name="bracket_005">
@@ -368,7 +368,7 @@
     <!--慣性-->
     <inertial>
       <mass value="0.0060293114415"/>
-      <inertia ixx="1.4057440439e-06" ixy="0" ixz="0" iyy="1.144769055e-06" iyz="0" izz="5.779531603e-07"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
     </inertial>
   </link>
   <link name="bracket_006">
@@ -391,7 +391,7 @@
     <!--慣性-->
     <inertial>
       <mass value="0.0060293114415"/>
-      <inertia ixx="1.4057440439e-06" ixy="0" ixz="0" iyy="1.144769055e-06" iyz="0" izz="5.779531603e-07"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
     </inertial>
   </link>
   <link name="bracket_007">
@@ -414,7 +414,7 @@
     <!--慣性-->
     <inertial>
       <mass value="0.0060293114415"/>
-      <inertia ixx="1.4057440439e-06" ixy="0" ixz="0" iyy="1.144769055e-06" iyz="0" izz="5.779531603e-07"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
     </inertial>
   </link>
   <link name="bracket_008">
@@ -437,7 +437,7 @@
     <!--慣性-->
     <inertial>
       <mass value="0.0060293114415"/>
-      <inertia ixx="1.4057440439e-06" ixy="0" ixz="0" iyy="1.144769055e-06" iyz="0" izz="5.779531603e-07"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
     </inertial>
   </link>
   <link name="bracket_009">
@@ -460,7 +460,7 @@
     <!--慣性-->
     <inertial>
       <mass value="0.0060293114415"/>
-      <inertia ixx="1.4057440439e-06" ixy="0" ixz="0" iyy="1.144769055e-06" iyz="0" izz="5.779531603e-07"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
     </inertial>
   </link>
   <link name="bracket_010">
@@ -483,7 +483,7 @@
     <!--慣性-->
     <inertial>
       <mass value="0.0060293114415"/>
-      <inertia ixx="1.4057440439e-06" ixy="0" ixz="0" iyy="1.144769055e-06" iyz="0" izz="5.779531603e-07"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
     </inertial>
   </link>
   <!--ジョイントの定義-->
@@ -618,5 +618,134 @@
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <limit effort="0" lower="-1.57079632679" upper="1.57079632679" velocity="0"/>
   </joint>
+  <transmission name="motor_001">
+    <type>transmission_interface/SimpleTransmission</type>
+    <!--関節の指定-->
+    <joint name="joint_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <!--アクチュエータの定義（ギア比1の減速機）-->
+    <actuator name="trans_001">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="motor_002">
+    <type>transmission_interface/SimpleTransmission</type>
+    <!--関節の指定-->
+    <joint name="joint_002">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <!--アクチュエータの定義（ギア比1の減速機）-->
+    <actuator name="trans_002">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="motor_003">
+    <type>transmission_interface/SimpleTransmission</type>
+    <!--関節の指定-->
+    <joint name="joint_003">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <!--アクチュエータの定義（ギア比1の減速機）-->
+    <actuator name="trans_003">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="motor_004">
+    <type>transmission_interface/SimpleTransmission</type>
+    <!--関節の指定-->
+    <joint name="joint_004">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <!--アクチュエータの定義（ギア比1の減速機）-->
+    <actuator name="trans_004">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="motor_005">
+    <type>transmission_interface/SimpleTransmission</type>
+    <!--関節の指定-->
+    <joint name="joint_005">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <!--アクチュエータの定義（ギア比1の減速機）-->
+    <actuator name="trans_005">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="motor_006">
+    <type>transmission_interface/SimpleTransmission</type>
+    <!--関節の指定-->
+    <joint name="joint_006">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <!--アクチュエータの定義（ギア比1の減速機）-->
+    <actuator name="trans_006">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="motor_007">
+    <type>transmission_interface/SimpleTransmission</type>
+    <!--関節の指定-->
+    <joint name="joint_007">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <!--アクチュエータの定義（ギア比1の減速機）-->
+    <actuator name="trans_007">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="motor_008">
+    <type>transmission_interface/SimpleTransmission</type>
+    <!--関節の指定-->
+    <joint name="joint_008">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <!--アクチュエータの定義（ギア比1の減速機）-->
+    <actuator name="trans_008">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="motor_009">
+    <type>transmission_interface/SimpleTransmission</type>
+    <!--関節の指定-->
+    <joint name="joint_009">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <!--アクチュエータの定義（ギア比1の減速機）-->
+    <actuator name="trans_009">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="motor_010">
+    <type>transmission_interface/SimpleTransmission</type>
+    <!--関節の指定-->
+    <joint name="joint_010">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <!--アクチュエータの定義（ギア比1の減速機）-->
+    <actuator name="trans_010">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <gazebo>
+    <!--関節状態配信プラグインを指定-->
+    <plugin filename="libgazebo_ros_joint_state_publisher.so" name="joint_state_publisher">
+      <!--対象とする関節名を指定-->
+      <jointName>
+      ['joint_001', 'joint_002', 'joint_003', 'joint_004', 'joint_005', 'joint_006', 'joint_007', 'joint_008', 'joint_009', 'joint_010']
+      </jointName>
+    </plugin>
+  </gazebo>
 </robot>
 

@@ -1,22 +1,22 @@
 <robot name="test_robot" xmlns:xacro="http://ros.org/wiki/xacro">
   <xacro:property name="dynamixel" value="package://snake/mesh/dynamixel.stl"/> 
   <xacro:property name="mass_d" value="0.023967239474" />
-  <xacro:property name="width_d" value="0.024" />
-  <xacro:property name="depth_d" value="0.024" />
-  <xacro:property name="height_d" value="0.036" />
-	<xacro:property name="ixx_d" value="0.0000035392036062" />
-	<xacro:property name="iyy_d" value="0.0000032067700889" />
-  <xacro:property name="izz_d" value="0.0000025171567719" />
+	<xacro:property name="ixx_d" value="3.5392036062e-06" />
+	<xacro:property name="iyy_d" value="3.2067700889e-06" />
+  <xacro:property name="izz_d" value="2.5171567719e-06" />
+	<xacro:property name="ixy_d" value="0" />
+	<xacro:property name="iyz_d" value="0" />
+  <xacro:property name="izx_d" value="0"/>
   <xacro:property name="gear" value="1" />
 
   <xacro:property name="adaptor" value="package://snake/mesh/adaptor.stl"/>
   <xacro:property name="mass_a" value="0.0060293114415" />
-  <xacro:property name="width_a" value="0.018" />
-  <xacro:property name="depth_a" value="0.035" />
-  <xacro:property name="height_a" value="0.015" />
-  <xacro:property name="ixx_a" value="0.0000014057440439" />
-  <xacro:property name="iyy_a" value="0.000001144769055" />
-  <xacro:property name="izz_a" value="0.0000005779531603" />
+  <xacro:property name="ixx_a" value="1.4057440439e-06" />
+  <xacro:property name="iyy_a" value="1.144769055e-06" />
+  <xacro:property name="izz_a" value="5.779531603e-07" />
+  <xacro:property name="ixx_a" value="0" />
+  <xacro:property name="iyy_a" value="0"/>
+  <xacro:property name="izz_a" value="0" />
 
   <xacro:property name="fixed_pos" value="0.046" />
 
@@ -71,9 +71,33 @@
                 ['joint_010', 'dynamixel_105', 'bracket_010']
                                               ]}" />
 
+<!-- 定義するactuatorの名前: joint名, motor名, transmission名 -->
+  <xacro:property name="actuator_setting" value="${[
+                                        ['joint_001', 'motor_001', 'trans_001'],
+                                        ['joint_002', 'motor_002', 'trans_002'],
+                                        ['joint_003', 'motor_003', 'trans_003'],
+                                        ['joint_004', 'motor_004', 'trans_004'],
+                                        ['joint_005', 'motor_005', 'trans_005'],
+                                        ['joint_006', 'motor_006', 'trans_006'],
+                                        ['joint_007', 'motor_007', 'trans_007'],
+                                        ['joint_008', 'motor_008', 'trans_008'],
+                                        ['joint_009', 'motor_009', 'trans_009'],
+                                        ['joint_010', 'motor_010', 'trans_010']
+                                          ]}" />
 
-
-
+<!-- 定義するactuatorの名前 -->
+  <xacro:property name="joint_names" value="${[
+                                        'joint_001',
+                                        'joint_002',
+                                        'joint_003',
+                                        'joint_004',
+                                        'joint_005',
+                                        'joint_006',
+                                        'joint_007',
+                                        'joint_008',
+                                        'joint_009',
+                                        'joint_010'
+                                        ]}" />
 
 	<link name="world"/>
 
@@ -200,10 +224,37 @@
     </xacro:if>
   </xacro:macro>
 
+  <!--アクチュエータの定義を作るマクロ関数-->
+  <xacro:macro name="transmission_definition" params="items:=^">
+    <xacro:if value="${items}">
+      <!-- pop: listから取り出し -->
+      <xacro:property name="config" value="${items.pop(0)}"/>
+      <xacro:property name="joint" value="${config[0]}"/>
+      <xacro:property name="trans" value="${config[1]}"/>
+      <xacro:property name="actuator" value="${config[2]}"/>
+
+    <transmission name="${trans}">
+      <type>transmission_interface/SimpleTransmission</type>
+      <!--関節の指定-->
+      <joint name="${joint}">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+      <!--アクチュエータの定義（ギア比1の減速機）-->
+      <actuator name="${actuator}">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>${gear}</mechanicalReduction>
+      </actuator>
+    </transmission>
+    <!-- 再帰 -->
+    <xacro:transmission_definition/>
+    </xacro:if>
+  </xacro:macro>
+
+
   <!--Dynamixelの定義-->
-  <xacro:dynamixel_definition items="${list(dynamixel_names)}"/>
+  <xacro:dynamixel_definition items="${dynamixel_names}"/>
   <!--ブラケットの定義-->
-  <xacro:bracket_definition items="${list(bracket_names)}"/>
+  <xacro:bracket_definition items="${bracket_names}"/>
   <!--ジョイントの定義-->
   <!--ワールドとリンク1-->
   <joint name="fixed_000" type="fixed">
@@ -212,7 +263,17 @@
     <origin xyz="0 0 0" rpy="0 0 ${-pi/2}"/>
       <limit lower="${-pi/2}" upper="${pi/2}" effort="0" velocity="0"/>
   </joint>
+  <xacro:joint_definition items="${joint_setting}"/>
+  <!-- アクチュエータの定義 -->
+  <xacro:transmission_definition items="${actuator_setting}"/>
 
-  <xacro:joint_definition items="${list(joint_setting)}"/>
-
+  <gazebo>
+    <!--関節状態配信プラグインを指定-->
+    <plugin name="joint_state_publisher" filename="libgazebo_ros_joint_state_publisher.so">
+      <!--対象とする関節名を指定-->
+      <jointName>
+      ${joint_names}
+      </jointName>
+    </plugin>
+  </gazebo>
 </robot>
