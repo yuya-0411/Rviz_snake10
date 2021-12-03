@@ -1,5 +1,5 @@
 <robot name="test_robot" xmlns:xacro="http://ros.org/wiki/xacro">
-  <xacro:property name="dynamixel" value="package://snake/mesh/dynamixel.stl"/> 
+  <xacro:property name="dynamixel" value="package://Rviz_snake/mesh/dynamixel.stl"/> 
   <xacro:property name="mass_d" value="0.023967239474" />
 	<xacro:property name="ixx_d" value="3.5392036062e-06" />
 	<xacro:property name="iyy_d" value="3.2067700889e-06" />
@@ -9,16 +9,19 @@
   <xacro:property name="izx_d" value="0"/>
   <xacro:property name="gear" value="1" />
 
-  <xacro:property name="adaptor" value="package://snake/mesh/adaptor.stl"/>
+  <xacro:property name="adaptor" value="package://Rviz_snake/mesh/adaptor.stl"/>
   <xacro:property name="mass_a" value="0.0060293114415" />
   <xacro:property name="ixx_a" value="1.4057440439e-06" />
   <xacro:property name="iyy_a" value="1.144769055e-06" />
   <xacro:property name="izz_a" value="5.779531603e-07" />
-  <xacro:property name="ixx_a" value="0" />
-  <xacro:property name="iyy_a" value="0"/>
-  <xacro:property name="izz_a" value="0" />
+  <xacro:property name="ixy_a" value="0" />
+  <xacro:property name="iyz_a" value="0"/>
+  <xacro:property name="izx_a" value="0" />
 
-  <xacro:property name="fixed_pos" value="0.046" />
+  <!-- <xacro:property name="fixed_pos" value="0.0249" />
+  <xacro:property name="joint_pos" value="0.021" /> -->
+  <xacro:property name="fixed_pos" value="0.021" />
+  <xacro:property name="joint_pos" value="0.0248" />
 
   <!-- 定義するdynamixelの名前 -->
   <xacro:property name="dynamixel_names" value="${[
@@ -48,8 +51,7 @@
                                           ]}" />
 
 
-
-  <xacro:property name="joint_setting" value="${[
+<xacro:property name="joint_setting" value="${[
                 ['joint_001', 'dynamixel_001', 'bracket_001'],
                 ['fixed_001', 'bracket_001', 'dynamixel_101', 'odd'],
                 ['joint_002', 'dynamixel_101', 'bracket_002'],
@@ -205,7 +207,7 @@
       </xacro:if>
       <xacro:if value="${'joint' in name}">
         <xacro:property name="joint_type" value="revolute"/>
-        <xacro:property name="x" value="${0}"/>
+        <xacro:property name="x" value="${joint_pos}"/>
         <xacro:property name="rpy" value="0 0 0"/>
       </xacro:if>
 
